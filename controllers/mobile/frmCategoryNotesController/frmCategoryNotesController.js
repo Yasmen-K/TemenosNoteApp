@@ -41,7 +41,7 @@ define({
   
   formatNotesData: function(responseData,fomratedData) {
     var scope = this;
-    var sortedNotes = sortNotes(responseData);
+    var sortedNotes = this.sortNotes(responseData);
     sortedNotes.forEach(function(note) {
       fomratedData.push({
         "lblNote": {"text": note.title},
