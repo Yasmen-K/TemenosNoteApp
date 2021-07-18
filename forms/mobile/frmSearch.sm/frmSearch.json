@@ -29,7 +29,10 @@
         "needAppMenu": false
     },
     "canUpdateUI": true,
-    "children": [],
+    "children": [
+        "flxMain",
+        "lblNoteTitle"
+    ],
     "containerweight": 100,
     "controllerInfo": {
         "default": {
