@@ -22,16 +22,14 @@ define({
   onViewCreated: function() {
     this.view.init = this.init;
     this.view.preShow = this.preShow;
- 
+   
   },
   
   
   init: function() {
     this.formatNotesData.call(this,this.segDataList,this.formatedNotes);
     this.sortNotes = this.sortNotes;
-    
-  	
-   
+     this.view.reusableHeader.btnSearch.onClick = this.navigate;
   },
   
   preShow: function() {
@@ -58,6 +56,11 @@ define({
        return new Date(a.edited).getTime() - new Date(b.edited).getTime();
     };
     return arrNotes.sort(sorter);
+  },
+  
+  navigate:function(){
+    var konyNavigate = new kony.mvc.Navigation("frmSearch");
+    konyNavigate.navigate();
   },
   
 
