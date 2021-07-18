@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "59dp"
+        "value": "53dp"
     },
     "_margin_": [
         1,
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "Label0j8f97ff0433146",
+    "id": "lblAdditionalMessage",
     "info": null,
     "ipad": {
         "psp": {
