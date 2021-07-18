@@ -6,7 +6,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "17.50%"
+        "value": "15.33%"
     },
     "_iphone_": {},
     "_left_": {
@@ -27,7 +27,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s653494b21484a6a9ff61a0a2694c748",
+    "_skin_": "s0168629cb254fb6b46b77bded83344e",
     "_spa_": {},
     "_spaan_": {},
     "_spabb_": {},
@@ -44,7 +44,6 @@
         "value": "100%"
     },
     "areflexpropsreferenced": false,
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": true,
     "containerweight": 0,
@@ -88,6 +87,15 @@
                 "kuid": "ic0c4cc5cd7f4d3f8b4218077a737370",
                 "srcKUID": "e73e01336c0041388cbcfcf8b4abab03",
                 "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "15.33%"
+                }
             }
         }
     },
@@ -96,6 +104,7 @@
     "info": null,
     "iscustomlayout": false,
     "isdatareferenced": false,
+    "issegmentchild": false,
     "isvisible": true,
     "kuid": "ic0c4cc5cd7f4d3f8b4218077a737370",
     "layouttype": 2,

@@ -4,10 +4,6 @@
     "__parentReadjusting__": false,
     "_data_": [
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -15,13 +11,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -29,13 +25,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -43,13 +39,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -57,13 +53,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -71,13 +67,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -85,13 +81,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -99,13 +95,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -113,13 +109,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -127,13 +123,13 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         },
         {
-            "CircleDark": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": ""
-            },
             "lblEdit": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
@@ -141,6 +137,10 @@
             "lblNote": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
+            },
+            "markerCircle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
             }
         }
     ],
@@ -224,7 +224,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": 0,
+    "selectedsectionindex": null,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
@@ -235,9 +235,9 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "CircleDark": "CircleDark",
         "lblEdit": "lblEdit",
-        "lblNote": "lblNote"
+        "lblNote": "lblNote",
+        "markerCircle": "markerCircle"
     },
     "zindex": 1
 }

@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "53dp"
+        "value": "17dp"
     },
     "_margin_": [
         1,
@@ -22,8 +22,8 @@
         0,
         0
     ],
-    "_skin_": "s893d52a22864cfaacdc1f7d77e9f063",
-    "_text_": "Label",
+    "_skin_": "s97152d405294a799b5af2cbc00fd1dc",
+    "_text_": "Organise your mind better!",
     "_top_": {
         "type": "string",
         "value": "65dp"

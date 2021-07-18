@@ -5,16 +5,16 @@ define({
  segDataList: [
     {title: "Ivan Minchev",
      edited: "December 29 2009",
-     marker: "25/06/2021"},
-    {name: "Denica Stoeva",
+     marker: "sknCircleGreen"},
+    {title: "Denica Stoeva",
      edited: "August 25 2010",
-     marker: "25/06/2021"},
+     marker: "sknCircleRed"},
     {title: "Magazin za mebeli",
      edited: "Mar 12 2012",
-     marker: "25/06/2021"},
-    {title: "Ivan Minchev",
+     marker: "sknCircleBlue"},
+    {title: "Ivan Milchev",
      edited: "June 14 2020",
-     marker: "25/06/2021"},
+     marker: ""},
   ],
   
   formatedNotes: [],
@@ -42,10 +42,13 @@ define({
   formatNotesData: function(responseData,fomratedData) {
     var scope = this;
     var sortedNotes = this.sortNotes(responseData);
+    alert(sortedNotes);
     sortedNotes.forEach(function(note) {
+      
       fomratedData.push({
         "lblNote": {"text": note.title},
         "lblEdited": {"text": note.edited},
+        "markerCircle":{"skin":note.marker},
       });
     });
   },

@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "53dp"
+        "value": "13dp"
     },
     "_margin_": [
         1,
@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "s893d52a22864cfaacdc1f7d77e9f063",
-    "_text_": "Label",
+    "_skin_": "se0a20881abf4108a289f529a6fccffa",
+    "_text_": "Temenos notes",
     "_top_": {
         "type": "string",
-        "value": "22dp"
+        "value": "23dp"
     },
     "_width_": {
         "type": "ref",
