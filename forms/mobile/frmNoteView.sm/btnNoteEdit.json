@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "33dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sea274bc449d4afab1e528ddc7de4fac",
+    "_text_": "Edit",
+    "_top_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sf8544bc6bb541d3a2c77ae9c7224995",
+    "id": "btnNoteEdit",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d306d33d93734e8fb217f23b59af10b4",
+    "name": "kony.ui.Button",
+    "parent": "flxContView",
+    "pf": "frmNoteView",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}
