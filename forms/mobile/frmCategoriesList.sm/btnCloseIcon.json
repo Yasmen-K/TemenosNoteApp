@@ -1,17 +1,16 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
     "__parentReadjusting__": false,
-    "_base64_": null,
     "_height_": {
         "type": "string",
         "value": "20dp"
     },
     "_margin_": [
-        0,
-        0,
-        0,
-        0
+        6,
+        6,
+        6,
+        6
     ],
     "_padding_": [
         0,
@@ -23,8 +22,8 @@
         "type": "string",
         "value": "5%"
     },
-    "_skin_": "s3a6eeaf4203425d80e0718cb2dbf6c9",
-    "_src_": "imagedrag.png",
+    "_skin_": "sa1fceea93034afa9fc6606f85e44664",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "5%"
@@ -35,25 +34,18 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "context": {
-        "channel": "mobile",
-        "formID": "frmCategoriesList",
-        "platform": "iphone",
-        "templateType": "forms",
-        "topLevelBox": null
-    },
-    "id": "imgCloseIcon",
-    "imagescalemode": 1,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s79c2a8781654f50b46016ddf34e917c",
+    "id": "btnCloseIcon",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d587ec588de5499086ade277ca1b033a",
-    "name": "kony.ui.Image2",
+    "kuid": "e1b8ddde256a482a89fbae196977c1a7",
+    "name": "kony.ui.Button",
     "parent": "flxAddCategory",
     "pf": "frmCategoriesList",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "srcType": 1,
-    "wType": "Image",
-    "widgetalignment": 5
+    "wType": "Button"
 }

@@ -46,8 +46,8 @@
     "children": [
         "lblAddCategory",
         "txtBoxAddCategory",
-        "btnAddCategory",
-        "imgCloseIcon"
+        "btnSaveCategory",
+        "btnCloseIcon"
     ],
     "clipbounds": true,
     "containerweight": 100,

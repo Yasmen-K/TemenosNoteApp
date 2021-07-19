@@ -5,9 +5,9 @@
     "_data_": [
         [
             {
-                "imgAddCategory": {
-                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "imagedrag.png"
+                "btnAddCategory": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Button"
                 },
                 "lblHeaderTitle": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -159,9 +159,9 @@
         ],
         [
             {
-                "imgAddCategory": {
-                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "imagedrag.png"
+                "btnAddCategory": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Button"
                 },
                 "lblHeaderTitle": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -402,9 +402,9 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
+        "btnAddCategory": "btnAddCategory",
         "flxCategoriesRowTemplate": "flxCategoriesRowTemplate",
         "flxHeaderTemplate": "flxHeaderTemplate",
-        "imgAddCategory": "imgAddCategory",
         "imgArrow": "imgArrow",
         "lblBottomLine": "lblBottomLine",
         "lblCategoryName": "lblCategoryName",

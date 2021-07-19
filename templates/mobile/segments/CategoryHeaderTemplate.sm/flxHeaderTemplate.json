@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "children": [
         "lblHeaderTitle",
-        "imgAddCategory"
+        "btnAddCategory"
     ],
     "clipbounds": true,
     "containerId": true,

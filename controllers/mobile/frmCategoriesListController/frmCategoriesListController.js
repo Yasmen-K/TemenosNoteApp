@@ -67,23 +67,25 @@ define({
   onViewCreated: function(){
     this.view.init = this.init;
     this.view.preShow = this.preShow;
-    //     this.view.postShow = this.postShow;
+    this.view.postShow = this.postShow;
   },
 
   init: function() {
+    debugger;
     this.renderSegList();
   },
 
   preShow: function() {
+    debugger;
     this.view.segListCategories.onRowClick = this.onRowClicked;
     this.view.segListCategories.setData(this.formatedData);
-    this.view.btnAddCategory.onClick=this.saveCategory;
-    this.view.imgCloseIcon.onClick=this.closePopup;
+    this.view.btnSaveCategory.onClick=this.saveCategory;
+    this.view.btnCloseIcon.onClick=this.closePopup;
   },
 
   postShow: function(){  
     debugger;
-    //     this.view.segListCategories.data[0][0]['imgAddCategory'].onTouchStart=this.addCategory;
+    this.view.segListCategories.data[0][0].btnAddCategory.onClick=this.addCategory;
     debugger;
   },
 
@@ -92,17 +94,15 @@ define({
     formatedData=[];
 
     var header=[];
+    debugger;
     header.push({
       "lblHeaderTitle":{"text":"Categories"},
-      "imgAddCategory":{
-        "src":"acme.png",
-        "onClick": self.addCategory
-      }
+      "btnAddCategory":{"skin":"sknBtnAddImg","onClick":self.addCategory}
     });
-    debugger;
+    //     debugger;
 
     responseData.sort(this.compare);
-    console.log("response data " + responseData);
+
     var rows=[];
     responseData.forEach(function(category) {
       rows.push({
@@ -114,9 +114,7 @@ define({
     });
 
     header.push(rows);
-    console.log("header with rows " + header);
     formatedData.push(header);
-    console.log("formated data after function " + formatedData);
     this.formatedData=formatedData;
   },
 
@@ -139,10 +137,8 @@ define({
   },
 
   addCategory: function(){
-
-    if(!this.view.flxPopup.isVisible){
-      this.view.flxPopup.setVisibility(true);
-    }
+    this.view.flxPopup.setVisibility(true);
+    this.view.flxPopup.isModalContainer=true;
   },
 
   saveCategory:function(){

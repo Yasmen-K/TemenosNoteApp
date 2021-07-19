@@ -37,7 +37,7 @@
     "contentalignment": 5,
     "displaytext": true,
     "focusskin": "s79c2a8781654f50b46016ddf34e917c",
-    "id": "btnAddCategory",
+    "id": "btnSaveCategory",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

@@ -1,17 +1,16 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
     "__parentReadjusting__": false,
-    "_base64_": null,
     "_height_": {
         "type": "string",
         "value": "40dp"
     },
     "_margin_": [
-        0,
-        0,
-        0,
-        0
+        6,
+        6,
+        6,
+        6
     ],
     "_padding_": [
         0,
@@ -23,8 +22,8 @@
         "type": "string",
         "value": "7%"
     },
-    "_skin_": "s3a6eeaf4203425d80e0718cb2dbf6c9",
-    "_src_": "acme.png",
+    "_skin_": "sa1fceea93034afa9fc6606f85e44664",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "0"
@@ -40,25 +39,18 @@
     },
     "containerId": true,
     "containerweight": 100,
-    "context": {
-        "channel": "mobile",
-        "platform": "iphone",
-        "templateType": "segments",
-        "topLevelBox": null
-    },
-    "id": "imgAddCategory",
-    "imagescalemode": 1,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s79c2a8781654f50b46016ddf34e917c",
+    "id": "btnAddCategory",
     "info": null,
-    "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f5d8d7f2b56b47958cefa49786495ec8",
-    "name": "kony.ui.Image2",
+    "kuid": "g874eb4149344f0f94d62d55bd204cf5",
+    "name": "kony.ui.Button",
     "parent": "flxHeaderTemplate",
     "pf": "CategoryHeaderTemplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "srcType": 1,
-    "wType": "Image",
-    "widgetalignment": 5
+    "wType": "Button"
 }
