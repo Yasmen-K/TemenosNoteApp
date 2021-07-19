@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "44dp"
+        "value": "37dp"
     },
     "_margin_": [
         1,
@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "s893d52a22864cfaacdc1f7d77e9f063",
-    "_text_": "Label",
+    "_skin_": "s2fb71263bbe4761ba67f5fe08830c67",
+    "_text_": "Category",
     "_top_": {
         "type": "string",
-        "value": "29dp"
+        "value": "260dp"
     },
     "_width_": {
         "type": "ref",
@@ -56,10 +56,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cd83d7ab6d49460da2c81f76ddd10afc",
+    "kuid": "cd30c6f8d65848008468b5a7c3d75134",
     "name": "kony.ui.Label",
-    "parent": "flxCategory",
-    "pf": "frmCategoryNotes",
+    "parent": "flxMain",
+    "pf": "frmSearch",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

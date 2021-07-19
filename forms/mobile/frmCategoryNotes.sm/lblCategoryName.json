@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "59dp"
+        "value": "44dp"
     },
     "_margin_": [
         1,
@@ -26,7 +26,7 @@
     "_text_": "Label",
     "_top_": {
         "type": "string",
-        "value": "65dp"
+        "value": "29dp"
     },
     "_width_": {
         "type": "ref",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "Label0j8f97ff0433146",
+    "id": "lblCategoryName",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,10 +56,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e1e1c05095d54e6481c68e365ec6d3e7",
+    "kuid": "cd83d7ab6d49460da2c81f76ddd10afc",
     "name": "kony.ui.Label",
-    "parent": "reusableHeader",
-    "pf": "userwidgetmodel",
+    "parent": "flxCategory",
+    "pf": "frmCategoryNotes",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "88dp"
+        "value": "13dp"
     },
     "_margin_": [
         1,
@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "s661cb4792aa4c80a7491d58b2e20e4e",
-    "_text_": "Label",
+    "_skin_": "se0a20881abf4108a289f529a6fccffa",
+    "_text_": "Temenos notes",
     "_top_": {
         "type": "string",
-        "value": "27dp"
+        "value": "23dp"
     },
     "_width_": {
         "type": "ref",
@@ -40,10 +40,9 @@
         }
     },
     "canUpdateUI": true,
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblNote",
+    "id": "lblMainMessage",
     "info": null,
     "ipad": {
         "psp": {
@@ -57,10 +56,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ic8ead0c1e894bae9675e3fcb9d8c536",
+    "kuid": "a49696ea38814dd3af52e1a9069c3874",
     "name": "kony.ui.Label",
-    "parent": "FBox0fac0c2b2d72342",
-    "pf": "FBox0fac0c2b2d72342",
+    "parent": "reusableHeader",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},
