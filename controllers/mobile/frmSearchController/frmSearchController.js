@@ -5,18 +5,18 @@ define({
   categories: [
     {name: "Movie",
      data:[
-       {title: "Ivan Minchev",
+       {name: "Ivan Minchev",
         edited: "December 29 2009",
         marker: "pink"},
        {name: "Denica Stoeva",
         edited: "August 25 2010",
         marker: "green"},
-       {title: "Magazin za mebeli",
+       {name: "Magazin za mebeli",
         edited: "Mar 12 2012",
         marker: "pink"},
-       {title: "Ivan Minchev",
+       {name: "Ivan Minchev",
         edited: "June 14 2020",
-        marker: "blue"},
+        marker: "pink"},
      ]},
     {name: "Food",
      data:[
@@ -70,7 +70,9 @@ define({
   searchData:function(){
     var categorySelection =  this.view.listBoxCategory.selectedKey;
     var colourSelection =  this.view.listBoxColor.selectedKey;
-    var noteTitle = this.view.txtNoteTitle.txt;
+    var noteTitle = this.view.txtNoteTitle.text;
+    
+    alert(noteTitle);
     
     var categoryValue = this.dataList.find(function(el){
       return el[0] === categorySelection;
@@ -80,19 +82,38 @@ define({
       return el[0] === colourSelection;
     });
     
+ 
+    
     var filteredCategory = this.categories.find(function(category){
+    
       return category.name === categoryValue[1];
     });
     
-//     var filteredNotes = filteredCategory.filter(function(notes){
-//       return notes.data.title === noteTitle;
-//     });
     
-    alert(filteredCategory);
+       
+    var filteredNotes = filteredCategory.data.filter(function(notes){
+      
+      return notes.name === noteTitle;
+     });
+    
+    var filteredMarker = filteredNotes.filter(function(marker){
+      return marker.marker === colourValue[1];
+     });
+    
+    
+     var konyNavigate = new kony.mvc.Navigation("frmSearchResults");
+     konyNavigate.navigate(filteredMarker);
+    
+    
+    
   },
 
+//   enteredText:function(){
+//     var text = this.view.txtNoteTitle.txt;
+//     return text;
+//   }
  
-
+ 
 
 
  });
