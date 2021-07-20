@@ -11,15 +11,15 @@ define({
   
   init: function() {
 //     this.formatNotesData.call(this,this.konyData,this.formatedNotes);
-    this.formatNotesData = this.formatNotesData;
+   
     this.sortNotes = this.sortNotes;
-    this.indexKony = '';
- 
+    this.konyIndex = kony.store.getItem("categoryIndex");
+    this.konyCategories = kony.store.getItem("categories");
+    this.formatNotesData(this.konyIndex,this.konyCategories,this.formatedNotes);
     },
   
   preShow: function() {
-    this.konyCategories = kony.store.getItem("categories");
-    console.log(this.indexKony);
+    
     this.view.segNotes.setData(this.formatedNotes);
     this.view.segNotes.onRowClick = this.onRowClicked;
     this.view.reusableHeader.btnSearch.onClick = this.navigate;
@@ -27,25 +27,20 @@ define({
    
   },
   
-    onNavigate: function(input) {
-        this.indexKony = input;
-        },
-  
-  
-  formatNotesData: function() {
     
-    var data = this.konyCategories[this.konyIndex];
-    console.log(data);
-    var scope = this;
-    var sortedNotes = this.sortNotes(data.data);
-    sortedNotes.forEach(function(note) {
+  
+  formatNotesData: function(konyIndex,konyData,formatedNotes) {
+   var categoryData = konyData[konyIndex];
+ var sortedNotes = this.sortNotes(categoryData.data);
+
+  sortedNotes.forEach(function(note) {
       
-      this.fomratedNotes.push({
+     formatedNotes.push({
         "lblNote": {"text": note.title},
         "lblEdited": {"text": note.edited},
-        "markerCircle":{"skin":note.marker},
+       "markerCircle":{"skin":note.marker},
       });
-    });
+     });
   },
   
   sortNotes:function(arrNotes){
@@ -57,7 +52,7 @@ define({
   
     onRowClicked: function() {
       var indexOfSelectedRow = this.view.segNotes.selectedRowIndex[1];
-      var data = this.konyCategories[this.indexKony].data[indexOfSelectedRow];
+      var data = this.konyCategories[this.konyIndex].data[indexOfSelectedRow];
       kony.store.setItem("currentNote", data);
       var konyNavigate = new kony.mvc.Navigation("frmNoteView");
       konyNavigate.navigate(this.indexKony);
