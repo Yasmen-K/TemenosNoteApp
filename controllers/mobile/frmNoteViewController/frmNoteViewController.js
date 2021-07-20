@@ -1,5 +1,13 @@
 define({ 
 
+  noteData: {
+    title: "Some Note",
+    categories: ["Category 2", "Category 3"],
+    noteTxt: "asdlasijdfoapdjfsdfsdfsd",
+    marker: "sknCircleGreen",
+    edited: "August 25 2010"
+  },
+  
   onViewCreated: function(){
     this.view.init = this.init;
     this.view.preShow = this.preShow;
@@ -7,9 +15,10 @@ define({
   },
 
   init: function(){
-    this.view.lblNoteTitle.text = "Some Note";
-    this.view.lblCategoryList.text = "Category 2, Category 3";
-    this.view.lblNoteTxt.text = "asdlasijdfoapdjfsdfsdfsd";
+    this.view.lblNoteTitle.text = this.noteData.title;
+    this.view.lblCategoryList.text = this.noteData.categories.join(", ");
+    this.view.lblNoteTxt.text = this.noteData.noteTxt;
+    this.view.CircleDark.skin = this.noteData.marker;
 
     this.view.btnNoteEdit.onClick = this.editNote;
     this.view.btnNoteRemove.onClick = this.removeNote;
@@ -19,7 +28,8 @@ define({
     var data = {
       title: this.view.lblNoteTitle.text,
       categories: this.view.lblCategoryList.text,
-      noteTxt: this.view.lblNoteTxt.text
+      noteTxt: this.view.lblNoteTxt.text,
+      marker: this.view.CircleDark.skin
     }; 
     var nvg = new kony.mvc.Navigation("frmEditNote");
     nvg.navigate(data);

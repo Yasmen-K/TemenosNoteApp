@@ -48,7 +48,8 @@
         "chkBxGrpCategories",
         "segColorTag",
         "lblEditCategories",
-        "lblEditColorTag"
+        "lblEditColorTag",
+        "CircleDark"
     ],
     "clipbounds": true,
     "containerweight": 100,
