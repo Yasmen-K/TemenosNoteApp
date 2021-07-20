@@ -39,6 +39,7 @@ define({
   
   formatNotesData: function(responseData,fomratedData) {
     var scope = this;
+    var konyData = kony.store.getItem("currentCategories");
     var sortedNotes = this.sortNotes(responseData);
     alert(sortedNotes);
     sortedNotes.forEach(function(note) {
