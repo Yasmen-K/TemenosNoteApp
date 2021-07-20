@@ -128,11 +128,10 @@
 
     onRowClicked: function() {
       var indexOfSelectedRow = this.view.segListCategories.selectedRowIndex[1];
-      var data = this.categories[indexOfSelectedRow];
       kony.store.setItem("categories", this.categories);
-      kony.store.setItem("currentCategory", data);
+//       kony.store.setItem("categoryIndex", indexOfSelectedRow);
       var konyNavigate = new kony.mvc.Navigation("frmCategoryNotes");
-      konyNavigate.navigate();
+      konyNavigate.navigate(indexOfSelectedRow);
     },
 
     addCategory: function(){
