@@ -37,7 +37,8 @@
     "canUpdateUI": true,
     "children": [
         "flxCategory",
-        "segNotes"
+        "segNotes",
+        "btnDeleteCategory"
     ],
     "clipbounds": true,
     "containerweight": 100,
