@@ -15,11 +15,11 @@ define({
     },
     {
       name: "Yellow",
-      color: "sknCircleGreen",
+      color: "sknCircleYellow",
     },
     {
       name: "Orange",
-      color: "sknCircleGreen",
+      color: "sknCircleOrange",
     },
   ],
 
@@ -27,11 +27,12 @@ define({
 
   onViewCreated: function(){
     this.view.preShow = this.preShow;
-    this.view.onNavigate = this.onNavigate;
+//     this.view.postShow = this.postShow;
   },
 
 
   preShow: function(){
+
     this.formatColorTagsData.call(this,this.segDataList,this.formatedColorTags);
     this.view.segColorTag.setData(this.formatedColorTags);
     this.view.segColorTag.onRowClick = this.onRowClick;
@@ -42,24 +43,50 @@ define({
 
     this.view.chkBxGrpCategories.onSelection = this.updateCategoryTxt;
   },
+  
+//   postShow: function() {
+//       this.view.txtBxNoteTitleInput.text = "";
+//       this.view.lblEditCategories.text = "";
+//       this.view.txtAreaEditNoteTxt.text = "";
+//   },
 
   onNavigate: function(data){
-    if(data) {
+    this.populateCategories();
+
+    if(data){
       this.view.txtBxNoteTitleInput.text = data.title;
       this.view.lblEditCategories.text = data.categories;
       this.view.txtAreaEditNoteTxt.text = data.noteTxt;
-      
+      this.updateChkBox();
+
       var skin = data.marker;
       var color = skin.split("sknCircle");
       this.view.CircleDark.skin = data.marker;
-      this.view.lblEditColorTag.text = color[1];  
+      this.view.lblEditColorTag.text = color[1];
+
+      this.view.btnNoteSave.text = "Save";
+    }else {
+      this.updateChkBox();
+      this.view.btnNoteSave.text = "Add";
     }
-    this.updateChkBox();   
   },
 
   // Category functions
+  populateCategories: function(){
+    var catArr = [];
+    var i = 1;
+    for(var ctg of kony.store.getItem("categories")){
+      catArr.push(["ctg" + i, ctg.name]);
+      i++;
+    } 
+    this.view.chkBxGrpCategories.masterData = catArr;
+  },
+
   updateChkBox: function(){
-    var categories = this.view.lblEditCategories.text.split(', ');
+    var categories = this.view.lblEditCategories.text;
+    if(categories.includes(",")){  
+      categories = categories.split(', ');
+    }
     var chkBox = this.view.chkBxGrpCategories.masterData;
 
     var arr = [];
@@ -84,19 +111,18 @@ define({
   updateCategoryTxt: function(){
     var checked = this.view.chkBxGrpCategories.selectedKeyValues;
     var arr = [];
-    
+
     if(checked){
       for(var check of checked){
         arr.push(check[1]);
       }
     }
-    
+
     this.view.lblEditCategories.text = arr.join(", ");
   },
-  
+
   // Color tag functions
-  formatColorTagsData: function(responseData,fomratedData) {
-    
+  formatColorTagsData: function(responseData,fomratedData) {  
     responseData.forEach(function(data) {
       fomratedData.push({
         "lblColor": {"text": data.name},
@@ -104,9 +130,9 @@ define({
       });
     });
   },
-  
+
   pickColor: function(){
-   var isVisible = this.view.segColorTag.isVisible;
+    var isVisible = this.view.segColorTag.isVisible;
 
     if(isVisible){
       this.view.segColorTag.isVisible = false;
@@ -114,21 +140,21 @@ define({
       this.view.segColorTag.isVisible = true;
     }
   },
-  
+
   onRowClick: function(){
     var colorData = this.view.segColorTag.selectedRowItems;
     this.view.lblEditColorTag.text = colorData[0].lblColor.text;
     this.view.CircleDark.skin = colorData[0].CircleDark.skin;
   }
 
-//   onClick: function(){
-//     var newData = {
-//       title: this.view.txtBxNoteTitleInput.text,
-//       categories: this.view.lstBxEditCategories.placeholder,
-//       noteTxt: this.view.txtAreaEditNoteTxt.text 
-//     };
-//     var nvg = new kony.mvc.Navigation("frmEditNote");
-// 	nvg.navigate(newData);
-//   }
+  //   onClick: function(){
+  //     var newData = {
+  //       title: this.view.txtBxNoteTitleInput.text,
+  //       categories: this.view.lstBxEditCategories.placeholder,
+  //       noteTxt: this.view.txtAreaEditNoteTxt.text 
+  //     };
+  //     var nvg = new kony.mvc.Navigation("frmEditNote");
+  // 	nvg.navigate(newData);
+  //   }
 
 });
