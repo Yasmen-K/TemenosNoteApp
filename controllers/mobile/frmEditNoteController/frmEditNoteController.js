@@ -44,7 +44,7 @@ define({
   },
 
   onNavigate: function(data){
-    this.view.lblNoteTitleInput.text = data.title;
+    this.view.txtBxNoteTitleInput.text = data.title;
     this.view.lblEditCategories.text = data.categories;
     this.view.txtAreaEditNoteTxt.text = data.noteTxt;
     this.updateChkBox();
