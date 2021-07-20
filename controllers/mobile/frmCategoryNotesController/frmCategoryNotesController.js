@@ -1,21 +1,4 @@
 define({ 
-
- //Type your controller code here 
-  
- segDataList: [
-    {title: "Ivan Minchev",
-     edited: "December 29 2009",
-     marker: "sknCircleGreen"},
-    {title: "Denica Stoeva",
-     edited: "August 25 2010",
-     marker: "sknCircleRed"},
-    {title: "Magazin za mebeli",
-     edited: "Mar 12 2012",
-     marker: "sknCircleBlue"},
-    {title: "Ivan Milchev",
-     edited: "June 14 2020",
-     marker: ""},
-  ],
   
   formatedNotes: [],
   
@@ -41,7 +24,6 @@ define({
   
   
   formatNotesData: function(konyData,fomratedData) {
-    alert(konyData);
     var scope = this;
     var sortedNotes = this.sortNotes(konyData.data);
     sortedNotes.forEach(function(note) {
@@ -55,7 +37,6 @@ define({
   },
   
   sortNotes:function(arrNotes){
-    alert(JSON.stringify(arrNotes));
     var sorter = function(a,b){
        return new Date(a.edited).getTime() - new Date(b.edited).getTime();
     };
@@ -65,10 +46,7 @@ define({
     onRowClicked: function() {
       var indexOfSelectedRow = this.view.segNotes.selectedRowIndex[1];
       var data = this.konyData.data[indexOfSelectedRow];
-      alert(JSON.stringify(data));
-      console.log(data);
       kony.store.setItem("currentNote", data);
-      alert(JSON.stringify(kony.store.getItem("currentNote")));
       var konyNavigate = new kony.mvc.Navigation("frmNoteView");
       konyNavigate.navigate();
     },

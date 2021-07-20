@@ -45,7 +45,7 @@
           edited: "December 29 2009",
           categories:["Kony Fabric"],
           marker: "sknCircleYellow"},
-         {name: "Integration",
+         {title: "Integration",
           description:"An Integration Service is an application component that represents the application interaction with an external system or data source.",
           edited: "August 25 2010",
           categories:["Kony Fabric"],
