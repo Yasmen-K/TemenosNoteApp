@@ -10,29 +10,37 @@ define({
   
   
   init: function() {
-    this.konyData = kony.store.getItem("currentCategory");
-    this.konyCategoriesData = kony.store.getItem("categories");
-    this.formatNotesData.call(this,this.konyData,this.formatedNotes);
+//     this.formatNotesData.call(this,this.konyData,this.formatedNotes);
+    this.formatNotesData = this.formatNotesData;
     this.sortNotes = this.sortNotes;
-    
-    console.log(this.konyCategoriesData);
+    this.indexKony = '';
+ 
     },
   
   preShow: function() {
+    this.konyCategories = kony.store.getItem("categories");
+    console.log(this.indexKony);
     this.view.segNotes.setData(this.formatedNotes);
     this.view.segNotes.onRowClick = this.onRowClicked;
     this.view.reusableHeader.btnSearch.onClick = this.navigate;
     this.view.ButtonRoundFloat.onClick = this.navigateAdd;
-    this.view.btnDeleteCategory.onClick = this.deleteCategory(this.konyCategoriesData,this.konyData);
+   
   },
   
+    onNavigate: function(input) {
+        this.indexKony = input;
+        },
   
-  formatNotesData: function(konyData,fomratedData) {
+  
+  formatNotesData: function() {
+    
+    var data = this.konyCategories[this.konyIndex];
+    console.log(data);
     var scope = this;
-    var sortedNotes = this.sortNotes(konyData.data);
+    var sortedNotes = this.sortNotes(data.data);
     sortedNotes.forEach(function(note) {
       
-      fomratedData.push({
+      this.fomratedNotes.push({
         "lblNote": {"text": note.title},
         "lblEdited": {"text": note.edited},
         "markerCircle":{"skin":note.marker},
@@ -49,20 +57,12 @@ define({
   
     onRowClicked: function() {
       var indexOfSelectedRow = this.view.segNotes.selectedRowIndex[1];
-      var data = this.konyData.data[indexOfSelectedRow];
+      var data = this.konyCategories[this.indexKony].data[indexOfSelectedRow];
       kony.store.setItem("currentNote", data);
       var konyNavigate = new kony.mvc.Navigation("frmNoteView");
-      konyNavigate.navigate();
+      konyNavigate.navigate(this.indexKony);
     },
   
-  deleteCategory:function(konyCategories,konyData){
-    var category = konyData.name;
-    var toRemove = konyCategories.find(function(el){
-      return el.name === category;
-    });
-    kony.store.removeItem("name");
-    
-  },
   
   navigate:function(){
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
