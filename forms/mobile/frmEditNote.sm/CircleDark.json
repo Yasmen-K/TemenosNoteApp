@@ -3,38 +3,34 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_height_": {
-        "type": "string",
-        "value": "40dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "10%"
+        "value": "13%"
     },
     "_margin_": [
-        1,
-        1,
-        1,
-        1
-    ],
-    "_padding_": [
-        12,
+        0,
         0,
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "10%"
-    },
-    "_skin_": "s184661912874151a8c004d1b6f28552",
-    "_text_": "Pick color",
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s8cdcc90e1ba42929bb919beacf32867",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "45%"
+        "value": "46%"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "7%"
     },
     "_wrapping_": 2,
     "android": {
@@ -46,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblEditColorTag",
+    "id": "CircleDark",
     "info": null,
     "ipad": {
         "psp": {
@@ -58,15 +54,12 @@
             "wrapping": 2
         }
     },
-    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d3c66b66d8694ba18b1db977959abddc",
+    "kuid": "i0f0097ae3e44a63ac6905006aa513b8",
+    "masterType": 1,
     "name": "kony.ui.Label",
-    "paddinginpixel": false,
     "parent": "flxContEditNote",
     "pf": "frmEditNote",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",

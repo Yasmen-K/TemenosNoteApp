@@ -3,23 +3,23 @@ define({
   segDataList: [
     {
       name: "Red",
-      color: "fa0000",
+      color: "sknCircleRed",
     },
     {
       name: "Green",
-      color: "389c17",
+      color: "sknCircleGreen",
     },
     {
       name: "Blue",
-      color: "4b88f1",
+      color: "sknCircleBlue",
     },
     {
       name: "Yellow",
-      color: "f0ff21",
+      color: "sknCircleGreen",
     },
     {
       name: "Orange",
-      color: "ff6714",
+      color: "sknCircleGreen",
     },
   ],
   
@@ -48,6 +48,11 @@ define({
     this.view.lblEditCategories.text = data.categories;
     this.view.txtAreaEditNoteTxt.text = data.noteTxt;
     this.updateChkBox();
+    
+    var skin = data.marker;
+    var color = skin.split("sknCircle");
+    this.view.CircleDark.skin = data.marker;
+    this.view.lblEditColorTag.text = color[1];  
   },
 
   // Category functions
@@ -93,7 +98,7 @@ define({
     responseData.forEach(function(data) {
       fomratedData.push({
         "lblColor": {"text": data.name},
-        "CircleDark": {"fontColor": data.color},
+        "CircleDark": {"skin": data.color},
       });
     });
   },
@@ -111,6 +116,7 @@ define({
   onRowClick: function(){
     var colorData = this.view.segColorTag.selectedRowItems;
     this.view.lblEditColorTag.text = colorData[0].lblColor.text;
+    this.view.CircleDark.skin = colorData[0].CircleDark.skin;
   }
 
 //   onClick: function(){
