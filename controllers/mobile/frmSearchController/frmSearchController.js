@@ -7,7 +7,7 @@ define({
      data:[
        {name: "Ivan Minchev",
         edited: "December 29 2009",
-        marker: "pink"},
+        marker: "sknCirclePink"},
        {name: "Denica Stoeva",
         edited: "August 25 2010",
         marker: "green"},
@@ -16,7 +16,7 @@ define({
         marker: "pink"},
        {name: "Ivan Minchev",
         edited: "June 14 2020",
-        marker: "pink"},
+        marker: "sknCirclePink"},
      ]},
     {name: "Food",
      data:[
@@ -62,7 +62,7 @@ define({
 ],
   
     colourList :[
-    ["key1", "pink"],
+    ["sknCirclePink", "pink"],
     ["key2", "green"],
     ["key3", "blue"]
 ],
@@ -97,7 +97,7 @@ define({
      });
     
     var filteredMarker = filteredNotes.filter(function(marker){
-      return marker.marker === colourValue[1];
+      return marker.marker === colourValue[0];
      });
     
     
@@ -108,10 +108,7 @@ define({
     
   },
 
-//   enteredText:function(){
-//     var text = this.view.txtNoteTitle.txt;
-//     return text;
-//   }
+
  
  
 
