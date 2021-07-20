@@ -2,17 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
     "__parentReadjusting__": false,
-    "_android_": {},
-    "_androidwearos_": {},
     "_children_": [],
-    "_desktopweb_": {},
     "_height_": {
         "type": "string",
-        "value": "17%"
+        "value": "17.50%"
     },
-    "_ipad_": {},
     "_iphone_": {},
-    "_kiosk_": {},
     "_left_": {
         "type": "string",
         "value": "0dp"
@@ -31,18 +26,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s653494b21484a6a9ff61a0a2694c748",
-    "_spa_": {},
-    "_spaan_": {},
-    "_spaandroidtablet_": {},
-    "_spabb_": {},
-    "_spaip_": {},
-    "_spaipad_": {},
-    "_spamobile_": {},
-    "_spatablet_": {},
-    "_spawindowstablet_": {},
-    "_spawinphone8_": {},
-    "_tabrcandroid_": {},
+    "_skin_": "s0168629cb254fb6b46b77bded83344e",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -54,64 +38,51 @@
         "type": "string",
         "value": "100%"
     },
-    "_windows10_": {},
-    "_windows8_": {},
-    "_winphone10_": {},
-    "_winphone8_": {},
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": true,
     "containerweight": 0,
     "dataDiffs": {
-        "ButtonRoundFloat": {
+        "RoundFloatingButton": {
             "__events__": {},
             "__info__": {
-                "kuid": "be74a9919d80493da9c57ba1290c17a7",
+                "kuid": "f1dd8c40f67f4abfa26f04a3fe09d028",
+                "srcKUID": "c31c41bd1921461d9b6f0325f1673ab8",
+                "wType": "FlexContainer"
+            }
+        },
+        "btnSearch": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "g976e40c168e4ca499964050acf29085",
                 "srcKUID": "af90a26459a64be7a9091faff0e761cc",
                 "wType": "Button"
             }
         },
-        "Label0efa394b4fa8c4e": {
+        "lblAdditionalMessage": {
             "__events__": {},
             "__info__": {
-                "kuid": "cdb0b45e84214e29ad012a2e3c85f691",
-                "srcKUID": "a49696ea38814dd3af52e1a9069c3874",
-                "wType": "Label"
-            }
-        },
-        "Label0j8f97ff0433146": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "g944cb1f2eb24061b0e897ae0b513b84",
+                "kuid": "ad619b6d34a84a7198d6703a21c0ab20",
                 "srcKUID": "e1e1c05095d54e6481c68e365ec6d3e7",
                 "wType": "Label"
             }
         },
-        "RoundFloatingButton": {
+        "lblMainMessage": {
             "__events__": {},
             "__info__": {
-                "kuid": "g5984aee42b04c4db53f76a465e84358",
-                "srcKUID": "c31c41bd1921461d9b6f0325f1673ab8",
-                "wType": "FlexContainer"
+                "kuid": "g92394b21d4f4e489bb2c931e5891a79",
+                "srcKUID": "a49696ea38814dd3af52e1a9069c3874",
+                "wType": "Label"
             }
         },
         "reusableHeader": {
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "dfc1018987c7471483e213b5819291a2",
+                "kuid": "ea1d5237322540acb387003b9eb84ced",
                 "srcKUID": "e73e01336c0041388cbcfcf8b4abab03",
                 "wType": "FlexContainer"
-            },
-            "autogrowMode": {
-                "Default": 0
-            },
-            "height": {
-                "Default": {
-                    "type": "string",
-                    "value": "17%"
-                }
             }
         }
     },
@@ -121,7 +92,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "dfc1018987c7471483e213b5819291a2",
+    "kuid": "ea1d5237322540acb387003b9eb84ced",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
