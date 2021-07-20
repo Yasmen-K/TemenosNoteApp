@@ -27,21 +27,23 @@ define({
   
   
   init: function() {
-    this.formatNotesData.call(this,this.segDataList,this.formatedNotes);
+    this.konyData = kony.store.getItem("currentCategory");
+    this.formatNotesData.call(this,this.konyData,this.formatedNotes);
     this.sortNotes = this.sortNotes;
-     this.view.reusableHeader.btnSearch.onClick = this.navigate;
+    this.view.reusableHeader.btnSearch.onClick = this.navigate;
+    
   },
   
   preShow: function() {
     this.view.segNotes.setData(this.formatedNotes);
+    this.view.segNotes.onRowClick = this.onRowClicked;
   },
   
   
-  formatNotesData: function(responseData,fomratedData) {
+  formatNotesData: function(konyData,fomratedData) {
+    alert(konyData);
     var scope = this;
-    var konyData = kony.store.getItem("currentCategories");
-    var sortedNotes = this.sortNotes(responseData);
-    alert(sortedNotes);
+    var sortedNotes = this.sortNotes(konyData.data);
     sortedNotes.forEach(function(note) {
       
       fomratedData.push({
@@ -53,11 +55,23 @@ define({
   },
   
   sortNotes:function(arrNotes){
+    alert(JSON.stringify(arrNotes));
     var sorter = function(a,b){
        return new Date(a.edited).getTime() - new Date(b.edited).getTime();
     };
     return arrNotes.sort(sorter);
   },
+  
+    onRowClicked: function() {
+      var indexOfSelectedRow = this.view.segNotes.selectedRowIndex[1];
+      var data = this.konyData.data[indexOfSelectedRow];
+      alert(JSON.stringify(data));
+      console.log(data);
+      kony.store.setItem("currentNote", data);
+      alert(JSON.stringify(kony.store.getItem("currentNote")));
+      var konyNavigate = new kony.mvc.Navigation("frmNoteView");
+      konyNavigate.navigate();
+    },
   
   navigate:function(){
     var konyNavigate = new kony.mvc.Navigation("frmSearch");

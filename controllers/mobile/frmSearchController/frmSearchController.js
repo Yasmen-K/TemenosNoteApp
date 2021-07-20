@@ -71,8 +71,7 @@ define({
     var categorySelection =  this.view.listBoxCategory.selectedKey;
     var colourSelection =  this.view.listBoxColor.selectedKey;
     var noteTitle = this.view.txtNoteTitle.text;
-    
-    alert(noteTitle);
+    var konyData = kony.store.getItem("categories");
     
     var categoryValue = this.dataList.find(function(el){
       return el[0] === categorySelection;
