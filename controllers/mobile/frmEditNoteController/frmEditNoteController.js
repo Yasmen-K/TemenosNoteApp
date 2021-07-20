@@ -22,9 +22,9 @@ define({
       color: "sknCircleGreen",
     },
   ],
-  
+
   formatedColorTags: [],
-  
+
   onViewCreated: function(){
     this.view.preShow = this.preShow;
     this.view.onNavigate = this.onNavigate;
@@ -35,24 +35,26 @@ define({
     this.formatColorTagsData.call(this,this.segDataList,this.formatedColorTags);
     this.view.segColorTag.setData(this.formatedColorTags);
     this.view.segColorTag.onRowClick = this.onRowClick;
-//     this.view.btnNoteSave.onClick = this.onClick;
-    
+    //     this.view.btnNoteSave.onClick = this.onClick;
+
     this.view.AngleDown.onTouchStart = this.pickCategories;
     this.view.AngleDownColor.onTouchStart = this.pickColor;
-    
+
     this.view.chkBxGrpCategories.onSelection = this.updateCategoryTxt;
   },
 
   onNavigate: function(data){
-    this.view.txtBxNoteTitleInput.text = data.title;
-    this.view.lblEditCategories.text = data.categories;
-    this.view.txtAreaEditNoteTxt.text = data.noteTxt;
-    this.updateChkBox();
-    
-    var skin = data.marker;
-    var color = skin.split("sknCircle");
-    this.view.CircleDark.skin = data.marker;
-    this.view.lblEditColorTag.text = color[1];  
+    if(data) {
+      this.view.txtBxNoteTitleInput.text = data.title;
+      this.view.lblEditCategories.text = data.categories;
+      this.view.txtAreaEditNoteTxt.text = data.noteTxt;
+      
+      var skin = data.marker;
+      var color = skin.split("sknCircle");
+      this.view.CircleDark.skin = data.marker;
+      this.view.lblEditColorTag.text = color[1];  
+    }
+    this.updateChkBox();   
   },
 
   // Category functions

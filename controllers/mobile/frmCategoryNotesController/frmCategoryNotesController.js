@@ -1,21 +1,4 @@
 define({ 
-
- //Type your controller code here 
-  
- segDataList: [
-    {title: "Ivan Minchev",
-     edited: "December 29 2009",
-     marker: "sknCircleGreen"},
-    {title: "Denica Stoeva",
-     edited: "August 25 2010",
-     marker: "sknCircleRed"},
-    {title: "Magazin za mebeli",
-     edited: "Mar 12 2012",
-     marker: "sknCircleBlue"},
-    {title: "Ivan Milchev",
-     edited: "June 14 2020",
-     marker: ""},
-  ],
   
   formatedNotes: [],
   
