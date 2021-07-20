@@ -45,7 +45,7 @@
           edited: "December 29 2009",
           categories:["Kony Fabric"],
           marker: "sknCircleYellow"},
-         {name: "Integration",
+         {title: "Integration",
           description:"An Integration Service is an application component that represents the application interaction with an external system or data source.",
           edited: "August 25 2010",
           categories:["Kony Fabric"],
@@ -128,11 +128,10 @@
 
     onRowClicked: function() {
       var indexOfSelectedRow = this.view.segListCategories.selectedRowIndex[1];
-      var data = this.categories[indexOfSelectedRow];
       kony.store.setItem("categories", this.categories);
-      kony.store.setItem("currentCategory", data);
+//       kony.store.setItem("categoryIndex", indexOfSelectedRow);
       var konyNavigate = new kony.mvc.Navigation("frmCategoryNotes");
-      konyNavigate.navigate();
+      konyNavigate.navigate(indexOfSelectedRow);
     },
 
     addCategory: function(){
