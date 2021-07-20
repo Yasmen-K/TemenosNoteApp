@@ -403,10 +403,10 @@
     "widgetalignment": 5,
     "widgetdatamap": {
         "btnAddCategory": "btnAddCategory",
+        "flxBottomLine": "flxBottomLine",
         "flxCategoriesRowTemplate": "flxCategoriesRowTemplate",
         "flxHeaderTemplate": "flxHeaderTemplate",
         "imgArrow": "imgArrow",
-        "lblBottomLine": "lblBottomLine",
         "lblCategoryName": "lblCategoryName",
         "lblHeaderTitle": "lblHeaderTitle",
         "lblNotesNumber": "lblNotesNumber"
