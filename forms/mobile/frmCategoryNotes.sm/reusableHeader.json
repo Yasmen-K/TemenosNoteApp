@@ -6,7 +6,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "17.50%"
+        "value": "15.33%"
     },
     "_iphone_": {},
     "_left_": {
@@ -27,7 +27,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s653494b21484a6a9ff61a0a2694c748",
+    "_skin_": "s0168629cb254fb6b46b77bded83344e",
     "_spa_": {},
     "_spaan_": {},
     "_spabb_": {},
@@ -44,12 +44,19 @@
         "value": "100%"
     },
     "areflexpropsreferenced": false,
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": true,
     "containerweight": 0,
     "dataDiffs": {
-        "ButtonRoundFloat": {
+        "RoundFloatingButton": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "i50f877c8c7847208a1b040dd74f8f94",
+                "srcKUID": "c31c41bd1921461d9b6f0325f1673ab8",
+                "wType": "FlexContainer"
+            }
+        },
+        "btnSearch": {
             "__events__": {},
             "__info__": {
                 "kuid": "g393b70d93ad4641843ab70291bdd651",
@@ -57,15 +64,7 @@
                 "wType": "Button"
             }
         },
-        "Label0efa394b4fa8c4e": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "e84352f49e3a4d9facae2095b0e2e701",
-                "srcKUID": "a49696ea38814dd3af52e1a9069c3874",
-                "wType": "Label"
-            }
-        },
-        "Label0j8f97ff0433146": {
+        "lblAdditionalMessage": {
             "__events__": {},
             "__info__": {
                 "kuid": "cfd72cbe31234ddb9153beb50f27cedb",
@@ -73,12 +72,12 @@
                 "wType": "Label"
             }
         },
-        "RoundFloatingButton": {
+        "lblMainMessage": {
             "__events__": {},
             "__info__": {
-                "kuid": "i50f877c8c7847208a1b040dd74f8f94",
-                "srcKUID": "c31c41bd1921461d9b6f0325f1673ab8",
-                "wType": "FlexContainer"
+                "kuid": "e84352f49e3a4d9facae2095b0e2e701",
+                "srcKUID": "a49696ea38814dd3af52e1a9069c3874",
+                "wType": "Label"
             }
         },
         "reusableHeader": {
@@ -88,6 +87,15 @@
                 "kuid": "ic0c4cc5cd7f4d3f8b4218077a737370",
                 "srcKUID": "e73e01336c0041388cbcfcf8b4abab03",
                 "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "15.33%"
+                }
             }
         }
     },
@@ -96,6 +104,7 @@
     "info": null,
     "iscustomlayout": false,
     "isdatareferenced": false,
+    "issegmentchild": false,
     "isvisible": true,
     "kuid": "ic0c4cc5cd7f4d3f8b4218077a737370",
     "layouttype": 2,

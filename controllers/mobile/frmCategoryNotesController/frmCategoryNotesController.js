@@ -5,16 +5,16 @@ define({
  segDataList: [
     {title: "Ivan Minchev",
      edited: "December 29 2009",
-     marker: "25/06/2021"},
-    {name: "Denica Stoeva",
+     marker: "sknCircleGreen"},
+    {title: "Denica Stoeva",
      edited: "August 25 2010",
-     marker: "25/06/2021"},
+     marker: "sknCircleRed"},
     {title: "Magazin za mebeli",
      edited: "Mar 12 2012",
-     marker: "25/06/2021"},
-    {title: "Ivan Minchev",
+     marker: "sknCircleBlue"},
+    {title: "Ivan Milchev",
      edited: "June 14 2020",
-     marker: "25/06/2021"},
+     marker: ""},
   ],
   
   formatedNotes: [],
@@ -22,16 +22,14 @@ define({
   onViewCreated: function() {
     this.view.init = this.init;
     this.view.preShow = this.preShow;
- 
+   
   },
   
   
   init: function() {
     this.formatNotesData.call(this,this.segDataList,this.formatedNotes);
     this.sortNotes = this.sortNotes;
-    
-  	
-   
+     this.view.reusableHeader.btnSearch.onClick = this.navigate;
   },
   
   preShow: function() {
@@ -42,10 +40,13 @@ define({
   formatNotesData: function(responseData,fomratedData) {
     var scope = this;
     var sortedNotes = this.sortNotes(responseData);
+    alert(sortedNotes);
     sortedNotes.forEach(function(note) {
+      
       fomratedData.push({
         "lblNote": {"text": note.title},
         "lblEdited": {"text": note.edited},
+        "markerCircle":{"skin":note.marker},
       });
     });
   },
@@ -55,6 +56,11 @@ define({
        return new Date(a.edited).getTime() - new Date(b.edited).getTime();
     };
     return arrNotes.sort(sorter);
+  },
+  
+  navigate:function(){
+    var konyNavigate = new kony.mvc.Navigation("frmSearch");
+    konyNavigate.navigate();
   },
   
 

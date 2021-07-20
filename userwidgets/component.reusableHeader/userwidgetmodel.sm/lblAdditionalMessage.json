@@ -8,13 +8,13 @@
     },
     "_left_": {
         "type": "string",
-        "value": "27dp"
+        "value": "17dp"
     },
     "_margin_": [
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1
     ],
     "_padding_": [
         0,
@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "s8cdcc90e1ba42929bb919beacf32867",
-    "_text_": "",
+    "_skin_": "s97152d405294a799b5af2cbc00fd1dc",
+    "_text_": "Organise your mind better!",
     "_top_": {
         "type": "string",
-        "value": "24dp"
+        "value": "65dp"
     },
     "_width_": {
         "type": "ref",
@@ -40,10 +40,9 @@
         }
     },
     "canUpdateUI": true,
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "CircleDark",
+    "id": "lblAdditionalMessage",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,12 +54,14 @@
             "wrapping": 2
         }
     },
+    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ccc393252d9c43c5a53beeed1d46d54d",
-    "masterType": 1,
+    "kuid": "e1e1c05095d54e6481c68e365ec6d3e7",
     "name": "kony.ui.Label",
-    "parent": "FBox0fac0c2b2d72342",
-    "pf": "FBox0fac0c2b2d72342",
+    "parent": "reusableHeader",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",

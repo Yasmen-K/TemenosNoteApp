@@ -27,11 +27,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "69.52%"
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "42.31%"
     },
     "containerweight": 100,
     "contentalignment": 5,

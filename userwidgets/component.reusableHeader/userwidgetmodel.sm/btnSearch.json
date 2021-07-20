@@ -1,0 +1,50 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "55dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s25fa48df00440c08f8bace9a176a6e5",
+    "_text_": "",
+    "_width_": {
+        "type": "string",
+        "value": "55dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s7fd3dd28495469ca141a2c5639e005f",
+    "id": "btnSearch",
+    "info": null,
+    "isvisible": true,
+    "kuid": "af90a26459a64be7a9091faff0e761cc",
+    "masterType": 1,
+    "name": "kony.ui.Button",
+    "parent": "RoundFloatingButton",
+    "pf": "userwidgetmodel",
+    "wType": "Button",
+    "zindex": 1
+}

@@ -26,7 +26,7 @@
     "_skin_": "s653494b21484a6a9ff61a0a2694c748",
     "_top_": {
         "type": "string",
-        "value": "117dp"
+        "value": "130dp"
     },
     "_width_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lblCategory",
+        "lblCategoryName",
         "btnAdd"
     ],
     "clipbounds": true,

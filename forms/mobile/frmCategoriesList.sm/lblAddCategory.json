@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "44dp"
+        "value": "5%"
     },
     "_margin_": [
         1,
@@ -17,20 +17,20 @@
         1
     ],
     "_padding_": [
-        0,
+        2,
         0,
         0,
         0
     ],
-    "_skin_": "s893d52a22864cfaacdc1f7d77e9f063",
-    "_text_": "Label",
+    "_skin_": "s49d06cc26614ed0bdd82e4d1681c731",
+    "_text_": "Category name",
     "_top_": {
         "type": "string",
-        "value": "29dp"
+        "value": "5%"
     },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "70%"
     },
     "_wrapping_": 2,
     "android": {
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblCategory",
+    "id": "lblAddCategory",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,14 +56,14 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cd83d7ab6d49460da2c81f76ddd10afc",
+    "kuid": "jce78c193af24f7f9f46244e4450ee2b",
     "name": "kony.ui.Label",
-    "parent": "flxCategory",
-    "pf": "frmCategoryNotes",
+    "paddinginpixel": false,
+    "parent": "flxAddCategory",
+    "pf": "frmCategoriesList",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},
     "tooltip": "",
-    "wType": "Label",
-    "zindex": 1
+    "wType": "Label"
 }

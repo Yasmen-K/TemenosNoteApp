@@ -23,7 +23,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s653494b21484a6a9ff61a0a2694c748",
+    "_skin_": "s0168629cb254fb6b46b77bded83344e",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -36,8 +36,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Label0efa394b4fa8c4e",
-        "Label0j8f97ff0433146",
+        "lblMainMessage",
+        "lblAdditionalMessage",
         "RoundFloatingButton"
     ],
     "clipbounds": true,

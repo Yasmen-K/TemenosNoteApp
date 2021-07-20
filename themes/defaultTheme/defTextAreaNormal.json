@@ -10,7 +10,7 @@
   "border_color": "333333ff",
   "border_style": "plain",
   "border_type": 0,
-  "border_width": 1,
+  "border_width": 0,
   "desktopweb": {
     "font_name": "Helvetica"
   },
@@ -29,7 +29,7 @@
   "kiosk": {
     "font_name": "None"
   },
-  "kuid": "s77f066c9abe417699b3fb1f59194b39",
+  "kuid": "s8df55fe32084c57a8b1c23c0fe77949",
   "spaan": {
     "font_name": "Helvetica"
   },
