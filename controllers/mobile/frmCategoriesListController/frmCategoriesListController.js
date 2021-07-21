@@ -75,7 +75,7 @@
     },
 
     preShow: function() {
-      this.view.reusableHeader.RoundFloatingButton.onClick=this.navToSearch;
+      this.view.reusableHeader.btnSearch.onClick=this.navToSearch;
       this.view.segListCategories.onRowClick = this.onRowClicked;
       this.view.segListCategories.setData(this.formatedData);
       this.view.btnSaveCategory.onClick=this.saveCategory;

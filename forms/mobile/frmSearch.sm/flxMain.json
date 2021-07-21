@@ -41,8 +41,9 @@
         "lblCategory",
         "lblColor",
         "listBoxCategory",
-        "listBoxColor",
-        "btnSearch"
+        "btnSearch",
+        "segColorTag",
+        "CircleDark"
     ],
     "clipbounds": true,
     "containerweight": 100,

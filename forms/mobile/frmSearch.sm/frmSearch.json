@@ -31,7 +31,9 @@
     "canUpdateUI": true,
     "children": [
         "flxMain",
-        "lblNoteTitle"
+        "lblNoteTitle",
+        "lblPickColour",
+        "iconAngleDownColor"
     ],
     "containerweight": 100,
     "controllerInfo": {
