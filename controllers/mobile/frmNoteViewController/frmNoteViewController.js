@@ -29,8 +29,6 @@ define({
   },
   
    navToSearch:function(){
-//     Trqbva prerabotka za konistore.
-//     kony.store.setItem("categories", this.categories);
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
   }
