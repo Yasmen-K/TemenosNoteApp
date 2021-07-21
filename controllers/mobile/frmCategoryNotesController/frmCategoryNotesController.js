@@ -7,6 +7,7 @@ define({
   },
   
   preShow: function() {
+    this.formatedNotes = [];
     this.konyIndex = kony.store.getItem("categoryIndex");
     this.konyCategories = kony.store.getItem("categories");
     this.formatNotesData(this.konyIndex,this.konyCategories,this.formatedNotes);
