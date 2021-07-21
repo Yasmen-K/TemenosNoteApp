@@ -42,7 +42,7 @@ define({
      data:[
        {title: "Identity",
         description:"Quantum Fabric identity services help you secure your application by adding an authentication layer.",
-        edited: "December 29 2039",
+        edited: "December 29 2009",
         categories:["Kony Fabric"],
         marker: "sknCircleYellow"},
        {title: "Integration",
@@ -78,7 +78,7 @@ define({
   },
 
   navToSearch:function(){
-    kony.store.setItem("categories", this.categories);
+     this.setDataToKony("categories", this.categories);
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
   },
@@ -97,7 +97,8 @@ define({
 
     var rows=[];
     responseData.forEach(function(category) {
-      var notesNumber=category.data.length+"";
+      var notesNumber=category.data.length;
+//       ?category.data.length+"":"0";
       rows.push({
         "lblCategoryName": {"text": category.name},
         "lblNotesNumber": {"text": notesNumber},
@@ -112,7 +113,8 @@ define({
   },
 
   renderSegList:function(){
-    var changedCategory=kony.store.getItem("categories");
+    debugger;
+    var changedCategory=this.getItemFromKony("categories");
     if(changedCategory){
       this.categories=changedCategory;
     }
@@ -128,8 +130,8 @@ define({
 
   onRowClicked: function() {
     var indexOfSelectedRow = this.view.segListCategories.selectedRowIndex[1];
-    kony.store.setItem("categories", this.categories);
-    kony.store.setItem("categoryIndex", indexOfSelectedRow);
+     this.setDataToKony("categories", this.categories);
+     this.setDataToKony("categoryIndex", indexOfSelectedRow);
     var konyNavigate = new kony.mvc.Navigation("frmCategoryNotes");
     konyNavigate.navigate();
   },
@@ -146,17 +148,28 @@ define({
       alert("Category with this name already exists");
       return;
     }
-      this.categories.push({
-        name:title,
-        data:[]
-      });
-    kony.store.setItem("categories",this.categories);
+    this.categories.push({
+      name:title,
+      data: new Array(0)
+    });
+    this.setDataToKony("categories", this.categories);
     this.renderSegList();    
     this.closePopup();
   },
 
   closePopup:function(){
     this.view.flxPopup.setVisibility(false);
+  },
+  
+  setDataToKony(key,data){
+    data=JSON.stringify(data);
+    kony.store.setItem(key, data);
+  },
+  
+  getItemFromKony(key){
+    var toReturn=JSON.parse(kony.store.getItem(key));
+    if(toReturn)return toReturn;
+    return ;
   }
 
 });
