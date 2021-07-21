@@ -149,31 +149,43 @@ define({
     var categories = kony.store.getItem("categories");
     var ctgIndex = kony.store.getItem("categoryIndex");
     var currNote = kony.store.getItem("currentNote");
-    
-    alert(categories);
-    
+
     var ctg = categories[ctgIndex];
     var ctgData = ctg.data;
-    for(var data of ctgData){
-      if(data.title === currNote.title){
-        data.title = newData.title;
-        data.description = newData.description;
-        data.categories = newData.categories;
-        data.marker = newData.marker;
-      }
-    }
-    
-    ctg.data = ctgData;
-    categories[ctgIndex] = ctg;
-    kony.store.setItem("categories", categories);
-    
+
     alert(categories);
-    
+    if(this.view.btnNoteSave.text === "Save"){
+      for(var data of ctgData){
+        if(data.title === currNote.title){
+          data.title = newData.title;
+          data.description = newData.description;
+          data.categories = newData.categories;
+          data.marker = newData.marker;
+        }
+      }
+      ctg.data = ctgData;
+      categories[ctgIndex] = ctg;
+      kony.store.setItem("categories", categories);
+    }else {
+      ctgData.push({
+        title: newData.title,
+        description: newData.description,
+        edited: "December 29 2009",
+        categories:newData.categories,
+        marker: newData.marker
+      });
+      ctg.data = ctgData;
+      categories[ctgIndex] = ctg;
+      kony.store.setItem("categories", categories);
+    }
+
+    alert(categories);
+
     this.view.txtBxNoteTitleInput.text = "";
     this.view.lblEditCategories.text = "";
     this.view.txtAreaEditNoteTxt.text = "";
     this.view.CircleDark.skin = "";
-    
+
     var nvg = new kony.mvc.Navigation("frmCategoriesList");
     nvg.navigate();
   }
