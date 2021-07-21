@@ -12,7 +12,7 @@ define({
     this.view.lblCategoryList.text = this.noteData.categories.join(", ");
     this.view.lblNoteTxt.text = this.noteData.description;
     this.view.CircleDark.skin = this.noteData.marker;
-
+	this.view.btnSearch.onClick=this.navToSearch;
     this.view.btnNoteEdit.onClick = this.editNote;
     this.view.btnNoteRemove.onClick = this.removeNote;
   },
@@ -27,6 +27,13 @@ define({
     var nvg = new kony.mvc.Navigation("frmEditNote");
     nvg.navigate(data);
   },
+  
+   navToSearch:function(){
+//     Trqbva prerabotka za konistore.
+//     kony.store.setItem("categories", this.categories);
+    var konyNavigate = new kony.mvc.Navigation("frmSearch");
+    konyNavigate.navigate();
+  }
 
 //   onNavigate:function(newData){
 //     this.view.lblNoteTitle.text = newData.title;

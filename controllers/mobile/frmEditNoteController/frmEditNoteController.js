@@ -35,7 +35,7 @@ define({
     this.view.segColorTag.setData(this.formatedColorTags);
     this.view.segColorTag.onRowClick = this.onRowClick;
     this.view.btnNoteSave.onClick = this.onClick;
-
+    this.view.btnSearch.onClick=this.navToSearch;
     this.view.AngleDown.onTouchStart = this.pickCategories;
     this.view.AngleDownColor.onTouchStart = this.pickColor;
 
@@ -188,6 +188,13 @@ define({
 
     var nvg = new kony.mvc.Navigation("frmCategoriesList");
     nvg.navigate();
+  },
+
+  navToSearch:function(){
+//     Trqbva prerabotka za konistore.
+//     kony.store.setItem("categories", this.categories);
+    var konyNavigate = new kony.mvc.Navigation("frmSearch");
+    konyNavigate.navigate();
   }
 
 });

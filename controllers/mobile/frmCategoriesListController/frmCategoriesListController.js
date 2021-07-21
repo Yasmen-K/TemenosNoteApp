@@ -66,18 +66,13 @@
     formatedData: [],
 
     onViewCreated: function(){
-      this.view.init = this.init;
       this.view.preShow = this.preShow;
     },
 
-    init: function() {
-      this.renderSegList();
-    },
-
     preShow: function() {
-      this.view.reusableHeader.RoundFloatingButton.onClick=this.navToSearch;
+      this.renderSegList();
+      this.view.reusableHeader.btnSearch.onClick=this.navToSearch;
       this.view.segListCategories.onRowClick = this.onRowClicked;
-      this.view.segListCategories.setData(this.formatedData);
       this.view.btnSaveCategory.onClick=this.saveCategory;
       this.view.btnCloseIcon.onClick=this.closePopup;
     },
@@ -116,6 +111,11 @@
     },
 
     renderSegList:function(){
+      debugger;
+      var changedCategory=kony.store.getItem("categories");
+      if(changedCategory){
+        this.categories=changedCategory;
+      }
       this.formatedSegmentData(this.categories, this.formatedData);
       this.view.segListCategories.setData(this.formatedData);
     },
@@ -152,4 +152,5 @@
     closePopup:function(){
       this.view.flxPopup.setVisibility(false);
     }
+    
   });
