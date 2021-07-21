@@ -97,9 +97,10 @@ define({
 
     var rows=[];
     responseData.forEach(function(category) {
+      var notesNumber=category.data.length+"";
       rows.push({
         "lblCategoryName": {"text": category.name},
-        "lblNotesNumber": {"text": Math.round(category.data.length)},
+        "lblNotesNumber": {"text": notesNumber},
         //         "imgArrow": {"text": contact.dateAdded},
         "flxBottomLine": {"width": "95%"}
       });
@@ -140,10 +141,16 @@ define({
 
   saveCategory:function(){
     var title=this.view.txtBoxAddCategory.text;
-    this.categories.push({
-      name:title,
-      data:[]
-    });
+    var alreadyExist=this.categories.find(function(value){return value.name===title; });
+    if(alreadyExist){
+      alert("Category with this name already exists");
+      return;
+    }
+      this.categories.push({
+        name:title,
+        data:[]
+      });
+    kony.store.setItem("categories",this.categories);
     this.renderSegList();    
     this.closePopup();
   },
