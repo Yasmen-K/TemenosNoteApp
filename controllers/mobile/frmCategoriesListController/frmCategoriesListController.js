@@ -140,10 +140,16 @@ define({
 
   saveCategory:function(){
     var title=this.view.txtBoxAddCategory.text;
-    this.categories.push({
-      name:title,
-      data:[]
-    });
+    var alreadyExist=this.categories.find(function(value){return value.name===title; });
+    if(alreadyExist){
+      alert("Category with this name already exists");
+      return;
+    }
+      this.categories.push({
+        name:title,
+        data:[]
+      });
+    kony.store.setItem("categories",this.categories);
     this.renderSegList();    
     this.closePopup();
   },
