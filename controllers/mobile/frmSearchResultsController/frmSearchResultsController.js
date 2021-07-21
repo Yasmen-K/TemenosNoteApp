@@ -43,13 +43,13 @@ define({
   
   formatNotesData: function(responseData,formatedData) {
     var scope = this;
-    alert(responseData);
+   
     var sortedNotes = this.sortNotes(responseData);
-    alert(sortedNotes);
+    
     sortedNotes.forEach(function(note) {
-      alert(note);
+     
       formatedData.push({
-        "lblNote": {"text": note.name},
+        "lblNote": {"text": note.title},
         "lblEdited": {"text": note.edited},
         "markerCircle":{"skin":note.marker},
       });
