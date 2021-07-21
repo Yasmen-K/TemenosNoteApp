@@ -1,12 +1,15 @@
 define({ 
 
-  formatedNotes: [],
+
 
   onViewCreated: function() {
     this.view.preShow = this.preShow;
+
   },
-  
+
+
   preShow: function() {
+    this.formatedNotes = [];
     this.konyIndex = kony.store.getItem("categoryIndex");
     this.konyCategories = kony.store.getItem("categories");
     this.formatNotesData(this.konyIndex,this.konyCategories,this.formatedNotes);
@@ -14,22 +17,27 @@ define({
     this.view.segNotes.onRowClick = this.onRowClicked;
     this.view.reusableHeader.btnSearch.onClick = this.navigate;
     this.view.ButtonRoundFloat.onClick = this.navigateAdd;
+    this.view.btnDeleteCategory.onClick = this.deleteCategory;
+    this.view.lblCategoryName.text = this.konyCategories[this.konyIndex].name;
   },
 
 
 
   formatNotesData: function(konyIndex,konyData,formatedNotes) {
     var categoryData = konyData[konyIndex];
-    var sortedNotes = this.sortNotes(categoryData.data);
+    var sortedNotes = categoryData ? this.sortNotes(categoryData.data) : null;
 
-    sortedNotes.forEach(function(note) {
+    if(sortedNotes){
+      sortedNotes.forEach(function(note) {
 
-      formatedNotes.push({
-        "lblNote": {"text": note.title},
-        "lblEdited": {"text": note.edited},
-        "markerCircle":{"skin":note.marker},
+        formatedNotes.push({
+          "lblNote": {"text": note.title},
+          "lblEdited": {"text": note.edited},
+          "markerCircle":{"skin":note.marker},
+        });
       });
-    });
+    }
+
   },
 
   sortNotes:function(arrNotes){
@@ -37,6 +45,14 @@ define({
       return new Date(a.edited).getTime() - new Date(b.edited).getTime();
     };
     return arrNotes.sort(sorter);
+  },
+  
+  deleteCategory:function(){
+    var categories = this.konyCategories;
+    categories.splice(this.konyIndex,1);
+    kony.store.setItem("categories", categories);
+     var konyNavigate = new kony.mvc.Navigation("frmCategoriesList");
+    konyNavigate.navigate();
   },
 
   onRowClicked: function() {
