@@ -3,12 +3,16 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_android_": {},
+    "_androidwearos_": {},
     "_children_": [],
+    "_desktopweb_": {},
     "_height_": {
         "type": "string",
         "value": "15.33%"
     },
+    "_ipad_": {},
     "_iphone_": {},
+    "_kiosk_": {},
     "_left_": {
         "type": "string",
         "value": "0dp"
@@ -27,11 +31,16 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s0168629cb254fb6b46b77bded83344e",
+    "_skin_": "s075b53533494fd9a3042ff374b87a1c",
     "_spa_": {},
     "_spaan_": {},
+    "_spaandroidtablet_": {},
     "_spabb_": {},
     "_spaip_": {},
+    "_spaipad_": {},
+    "_spawindowstablet_": {},
+    "_spawinphone8_": {},
+    "_tabrcandroid_": {},
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -43,6 +52,10 @@
         "type": "string",
         "value": "100%"
     },
+    "_windows10_": {},
+    "_windows8_": {},
+    "_winphone10_": {},
+    "_winphone8_": {},
     "areflexpropsreferenced": false,
     "canUpdateUI": true,
     "clipbounds": true,
