@@ -111,7 +111,6 @@
     },
 
     renderSegList:function(){
-      debugger;
       var changedCategory=kony.store.getItem("categories");
       if(changedCategory){
         this.categories=changedCategory;
