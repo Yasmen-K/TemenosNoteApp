@@ -27,7 +27,7 @@
     "children": [
         "markerCircle",
         "lblNote",
-        "lblEdit"
+        "lblEdited"
     ],
     "clipbounds": false,
     "containerId": true,
