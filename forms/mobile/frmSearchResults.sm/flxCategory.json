@@ -36,7 +36,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lblCategoryName",
+        "lblSearchResults",
         "btnAdd"
     ],
     "clipbounds": true,

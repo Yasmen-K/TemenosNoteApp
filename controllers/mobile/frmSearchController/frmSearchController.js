@@ -65,9 +65,9 @@ define({
     var categorySelection =  this.view.listBoxCategory.selectedKey;
     var colourSelection =  this.view.lblPickColour.text;
     var noteTitle = this.view.txtNoteTitle.text;
-	var filteredMarker = '';
+    var filteredMarker = '';
 
-    var categoryValue = this.dataList.find(function(el){
+    var categoryValue = this.categoryDropDown.find(function(el){
       return el[0] === categorySelection;
     });
 
@@ -78,30 +78,26 @@ define({
 
 
 
-    var filteredCategory = this.categories.find(function(category){
+    var filteredCategory = this.konyData.find(function(category){
 
       return category.name === categoryValue[1];
 
     });
 
-    if(noteTitle){
-      var filteredNotes = filteredCategory.data.filter(function(notes){
+    
+      var filteredNotes = noteTitle !== null ? 
+      filteredCategory.data.filter(function(notes){return notes.name === noteTitle;}) 
+      : null;
 
-        return notes.name === noteTitle;
-      });
+      filteredMarker = filteredNotes !== null ?  
+      filteredNotes.filter(function(marker){return marker.marker === colourValue;}) 
+      : filteredCategory.data.filter(function(marker){return marker.marker === colourValue.color;});
 
-      filteredMarker = filteredNotes.filter(function(marker){
-        return marker.marker === colourValue;
-      });
+   
 
-		}else{
-           filteredMarker = filteredCategory.data.filter(function(marker){
-        return marker.marker === colourValue;
-      });
-        }
 
-  var konyNavigate = new kony.mvc.Navigation("frmSearchResults");
-      konyNavigate.navigate(filteredMarker);
+    var konyNavigate = new kony.mvc.Navigation("frmSearchResults");
+    konyNavigate.navigate(filteredMarker);
 
 
 
