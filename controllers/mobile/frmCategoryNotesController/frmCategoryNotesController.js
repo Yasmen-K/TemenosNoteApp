@@ -13,7 +13,7 @@ define({
     this.konyIndex = kony.store.getItem("categoryIndex");
     this.konyCategories = kony.store.getItem("categories");
     this.formatNotesData(this.konyIndex,this.konyCategories,this.formatedNotes);
-    this.view.segNotes.setData(this.formatedNotes);
+    
     this.view.segNotes.onRowClick = this.onRowClicked;
     this.view.reusableHeader.btnSearch.onClick = this.navigate;
     this.view.ButtonRoundFloat.onClick = this.navigateAdd;
@@ -25,9 +25,14 @@ define({
 
   formatNotesData: function(konyIndex,konyData,formatedNotes) {
     var categoryData = konyData[konyIndex];
-    var sortedNotes = categoryData ? this.sortNotes(categoryData.data) : null;
 
-    if(sortedNotes){
+
+    if(categoryData.data.length > 0){
+      
+       var sortedNotes = this.sortNotes(categoryData.data);
+      konyData[konyIndex].data = sortedNotes;
+      kony.store.setItem("categories", konyData);
+      console.log(konyData);
       sortedNotes.forEach(function(note) {
 
         formatedNotes.push({
@@ -36,15 +41,15 @@ define({
           "markerCircle":{"skin":note.marker},
         });
       });
+      this.view.segNotes.setData(formatedNotes);
     }
-
   },
 
-  sortNotes:function(arrNotes){
-    var sorter = function(a,b){
+   sortNotes:function(arrNotes){
+     var sorter = function(a,b){
       return new Date(a.edited).getTime() - new Date(b.edited).getTime();
-    };
-    return arrNotes.sort(sorter);
+     };
+     return arrNotes.sort(sorter);
   },
   
   deleteCategory:function(){

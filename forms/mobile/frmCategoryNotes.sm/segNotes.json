@@ -4,7 +4,7 @@
     "__parentReadjusting__": false,
     "_data_": [
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -18,7 +18,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -32,7 +32,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -46,7 +46,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -60,7 +60,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -74,7 +74,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -88,7 +88,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -102,7 +102,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -116,7 +116,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -130,7 +130,7 @@
             }
         },
         {
-            "lblEdit": {
+            "lblEdited": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "Label"
             },
@@ -224,7 +224,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": 0,
+    "selectedsectionindex": null,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
@@ -235,7 +235,7 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "lblEdit": "lblEdit",
+        "lblEdited": "lblEdited",
         "lblNote": "lblNote",
         "markerCircle": "markerCircle"
     },
