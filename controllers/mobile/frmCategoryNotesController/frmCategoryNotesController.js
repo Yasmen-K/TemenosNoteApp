@@ -10,8 +10,6 @@ define({
   
   
   init: function() {
-//     this.formatNotesData.call(this,this.konyData,this.formatedNotes);
-   
     this.sortNotes = this.sortNotes;
     this.konyIndex = kony.store.getItem("categoryIndex");
     this.konyCategories = kony.store.getItem("categories");
@@ -24,7 +22,6 @@ define({
     this.view.segNotes.onRowClick = this.onRowClicked;
     this.view.reusableHeader.btnSearch.onClick = this.navigate;
     this.view.ButtonRoundFloat.onClick = this.navigateAdd;
-   
   },
   
     

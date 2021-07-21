@@ -3,12 +3,12 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "40dp"
     },
     "_left_": {
         "type": "string",
-        "value": "15.73%"
+        "value": "10.00%"
     },
     "_margin_": [
         1,
@@ -17,20 +17,24 @@
         1
     ],
     "_padding_": [
-        0,
+        12,
         0,
         0,
         0
     ],
-    "_skin_": "s6eb9c5f6ca34d50bb9c81c7f3cdb42e",
-    "_text_": "Color",
+    "_right_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_skin_": "s184661912874151a8c004d1b6f28552",
+    "_text_": "Pick color",
     "_top_": {
         "type": "string",
-        "value": "27.85%"
+        "value": "53.87%"
     },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "80%"
     },
     "_wrapping_": 2,
     "android": {
@@ -40,10 +44,9 @@
         }
     },
     "canUpdateUI": true,
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblColor",
+    "id": "lblPickColour",
     "info": null,
     "ipad": {
         "psp": {
@@ -57,10 +60,11 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a208df66652c4701b69fa23027389045",
+    "kuid": "c3314478d78f4eef91602f5458fecdd1",
     "name": "kony.ui.Label",
-    "parent": "flxContRowColorTag",
-    "pf": "segColorTagRowTemplate",
+    "paddinginpixel": false,
+    "parent": "frmSearch",
+    "pf": "frmSearch",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

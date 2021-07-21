@@ -23,7 +23,7 @@
         0
     ],
     "_skin_": "s893d52a22864cfaacdc1f7d77e9f063",
-    "_text_": "Label",
+    "_text_": "Search Results",
     "_top_": {
         "type": "string",
         "value": "29dp"
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblCategoryName",
+    "id": "lblSearchResults",
     "info": null,
     "ipad": {
         "psp": {
