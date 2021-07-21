@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_placeholder_": "Placeholder",
+    "_placeholder_": "",
     "_right_": {
         "type": "string",
         "value": "10%"

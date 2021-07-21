@@ -4,7 +4,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "33dp"
+        "value": "40dp"
     },
     "_left_": {
         "type": "string",
@@ -22,15 +22,15 @@
         0,
         0
     ],
-    "_skin_": "sea274bc449d4afab1e528ddc7de4fac",
+    "_skin_": "se1fe618724b4823a76cd6fbfb1d79a6",
     "_text_": "Edit",
     "_top_": {
         "type": "string",
-        "value": "90%"
+        "value": "85%"
     },
     "_width_": {
         "type": "string",
-        "value": "30%"
+        "value": "35%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
