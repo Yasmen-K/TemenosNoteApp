@@ -3,21 +3,14 @@ define({
   formatedNotes: [],
 
   onViewCreated: function() {
-    this.view.init = this.init;
     this.view.preShow = this.preShow;
-
   },
-
-
-  init: function() {
-    this.sortNotes = this.sortNotes;
+  
+  preShow: function() {
+    this.formatedNotes = [];
     this.konyIndex = kony.store.getItem("categoryIndex");
     this.konyCategories = kony.store.getItem("categories");
     this.formatNotesData(this.konyIndex,this.konyCategories,this.formatedNotes);
-  },
-
-  preShow: function() {
-
     this.view.segNotes.setData(this.formatedNotes);
     this.view.segNotes.onRowClick = this.onRowClicked;
     this.view.reusableHeader.btnSearch.onClick = this.navigate;
