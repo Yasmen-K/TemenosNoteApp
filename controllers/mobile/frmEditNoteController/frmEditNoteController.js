@@ -27,28 +27,20 @@ define({
 
   onViewCreated: function(){
     this.view.preShow = this.preShow;
-//     this.view.postShow = this.postShow;
   },
 
 
   preShow: function(){
-
     this.formatColorTagsData.call(this,this.segDataList,this.formatedColorTags);
     this.view.segColorTag.setData(this.formatedColorTags);
     this.view.segColorTag.onRowClick = this.onRowClick;
-    //     this.view.btnNoteSave.onClick = this.onClick;
+    this.view.btnNoteSave.onClick = this.onClick;
 
     this.view.AngleDown.onTouchStart = this.pickCategories;
     this.view.AngleDownColor.onTouchStart = this.pickColor;
 
     this.view.chkBxGrpCategories.onSelection = this.updateCategoryTxt;
   },
-  
-//   postShow: function() {
-//       this.view.txtBxNoteTitleInput.text = "";
-//       this.view.lblEditCategories.text = "";
-//       this.view.txtAreaEditNoteTxt.text = "";
-//   },
 
   onNavigate: function(data){
     this.populateCategories();
@@ -66,20 +58,19 @@ define({
 
       this.view.btnNoteSave.text = "Save";
     }else {
-      this.updateChkBox();
       this.view.btnNoteSave.text = "Add";
     }
   },
 
   // Category functions
   populateCategories: function(){
-    var catArr = [];
+    var ctgArr = [];
     var i = 1;
     for(var ctg of kony.store.getItem("categories")){
-      catArr.push(["ctg" + i, ctg.name]);
+      ctgArr.push(["ctg" + i, ctg.name]);
       i++;
     } 
-    this.view.chkBxGrpCategories.masterData = catArr;
+    this.view.chkBxGrpCategories.masterData = ctgArr;
   },
 
   updateChkBox: function(){
@@ -145,16 +136,46 @@ define({
     var colorData = this.view.segColorTag.selectedRowItems;
     this.view.lblEditColorTag.text = colorData[0].lblColor.text;
     this.view.CircleDark.skin = colorData[0].CircleDark.skin;
-  }
+  },
 
-  //   onClick: function(){
-  //     var newData = {
-  //       title: this.view.txtBxNoteTitleInput.text,
-  //       categories: this.view.lstBxEditCategories.placeholder,
-  //       noteTxt: this.view.txtAreaEditNoteTxt.text 
-  //     };
-  //     var nvg = new kony.mvc.Navigation("frmEditNote");
-  // 	nvg.navigate(newData);
-  //   }
+  // Button Add/Save functions
+  onClick: function(){
+    var newData = {
+      title: this.view.txtBxNoteTitleInput.text,
+      categories: this.view.lblEditCategories.text.split(", "),
+      description: this.view.txtAreaEditNoteTxt.text,
+      marker: this.view.CircleDark.skin
+    };
+    var categories = kony.store.getItem("categories");
+    var ctgIndex = kony.store.getItem("categoryIndex");
+    var currNote = kony.store.getItem("currentNote");
+    
+    alert(categories);
+    
+    var ctg = categories[ctgIndex];
+    var ctgData = ctg.data;
+    for(var data of ctgData){
+      if(data.title === currNote.title){
+        data.title = newData.title;
+        data.description = newData.description;
+        data.categories = newData.categories;
+        data.marker = newData.marker;
+      }
+    }
+    
+    ctg.data = ctgData;
+    categories[ctgIndex] = ctg;
+    kony.store.setItem("categories", categories);
+    
+    alert(categories);
+    
+    this.view.txtBxNoteTitleInput.text = "";
+    this.view.lblEditCategories.text = "";
+    this.view.txtAreaEditNoteTxt.text = "";
+    this.view.CircleDark.skin = "";
+    
+    var nvg = new kony.mvc.Navigation("frmCategoriesList");
+    nvg.navigate();
+  }
 
 });
