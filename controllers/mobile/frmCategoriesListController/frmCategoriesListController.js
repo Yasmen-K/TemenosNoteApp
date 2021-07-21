@@ -97,9 +97,10 @@ define({
 
     var rows=[];
     responseData.forEach(function(category) {
+      var notesNumber=category.data.length+"";
       rows.push({
         "lblCategoryName": {"text": category.name},
-        "lblNotesNumber": {"text": Math.round(category.data.length)},
+        "lblNotesNumber": {"text": notesNumber},
         //         "imgArrow": {"text": contact.dateAdded},
         "flxBottomLine": {"width": "95%"}
       });
