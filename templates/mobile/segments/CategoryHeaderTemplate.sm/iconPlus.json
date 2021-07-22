@@ -22,12 +22,8 @@
         "type": "string",
         "value": "7%"
     },
-    "_skin_": "sfe761912f7046c8b4678c8e1f28780a",
+    "_skin_": "s609af2fec1b4473877fb46175c7a66f",
     "_text_": "",
-    "_top_": {
-        "type": "string",
-        "value": "10dp"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -60,7 +56,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "bceb7c5298334d24a3b105d06989894a",
+    "kuid": "b1d1da40207143e58c41a103c67f06ee",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxHeaderTemplate",

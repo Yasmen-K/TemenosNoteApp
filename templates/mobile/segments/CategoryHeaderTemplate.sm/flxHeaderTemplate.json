@@ -37,6 +37,7 @@
     "children": [
         "lblHeaderTitle",
         "btnAddCategory",
+        "flxIcon",
         "iconPlus"
     ],
     "clipbounds": true,
