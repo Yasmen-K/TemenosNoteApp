@@ -30,8 +30,8 @@
     },
     "canUpdateUI": true,
     "children": [
-        "segListCategories",
         "flxPopup",
+        "flxCategory",
         "reusableHeader"
     ],
     "containerweight": 100,

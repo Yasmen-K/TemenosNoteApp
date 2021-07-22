@@ -47,17 +47,17 @@ define({
         marker: "sknCircleYellow"},
        {title: "Integration",
         description:"An Integration Service is an application component that represents the application interaction with an external system or data source.",
-        edited: "August 25 2010",
+        edited: "July 17 2021",
         categories:["Kony Fabric"],
         marker: "sknCircleOrange"},
        {title: "Orchestration",
         description:"Orchestration Services leverage the concept of combining multiple integration services, object services or orchestration services into a single service to simplify business logic in client apps and reduce the number of service invocations.",
-        edited: "Mar 12 2012",
+        edited: "July 15 2021",
         categories:["Kony Fabric"],
         marker: "sknCircleBlue"},
        {title: "Object Services",
         description:"Object Services is a feature of Quantum Fabric that enables model-driven application design and development by following a microservices architectural approach to create reusable components and link them to fit into your solution.",
-        edited: "June 14 2020",
+        edited: "July 20 2021",
         categories:["Kony Fabric"],
         marker: "sknCircleRed"},
      ]}
@@ -78,7 +78,7 @@ define({
   },
 
   navToSearch:function(){
-     this.setDataToKony("categories", this.categories);
+    this.setDataToKony("categories", this.categories);
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
   },
@@ -90,18 +90,18 @@ define({
     var header=[];
     header.push({
       "lblHeaderTitle":{"text":"Categories"},
-      "btnAddCategory":{"skin":"sknBtnAddImg","onClick":self.addCategory}
+      "iconPlus":{"src":"iconPlus.json","onClick":self.addCategory}
     });
 
     responseData.sort(this.compare);
 
     var rows=[];
     responseData.forEach(function(category) {
-      var notesNumber=category.data.length;
-//       ?category.data.length+"":"0";
+      var notesNumber=category.data.length+"";
       rows.push({
         "lblCategoryName": {"text": category.name},
         "lblNotesNumber": {"text": notesNumber},
+        "iconArrowCircleORight":{"src":"iconArrowCircleORight.json"},
         //         "imgArrow": {"text": contact.dateAdded},
         "flxBottomLine": {"width": "95%"}
       });
@@ -161,12 +161,12 @@ define({
     this.view.flxPopup.setVisibility(false);
   },
   
-  setDataToKony(key,data){
+  setDataToKony:function(key,data){
     data=JSON.stringify(data);
     kony.store.setItem(key, data);
   },
   
-  getItemFromKony(key){
+  getItemFromKony:function(key){
     var toReturn=JSON.parse(kony.store.getItem(key));
     if(toReturn)return toReturn;
     return ;

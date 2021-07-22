@@ -45,7 +45,7 @@
     "id": "btnAddCategory",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "g874eb4149344f0f94d62d55bd204cf5",
     "name": "kony.ui.Button",
     "parent": "flxHeaderTemplate",

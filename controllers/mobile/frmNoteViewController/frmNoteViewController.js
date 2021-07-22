@@ -5,8 +5,7 @@ define({
   },
 
   preShow: function(){
-    this.noteData = kony.store.getItem("currentNote");
-
+    this.noteData = this.getItemFromKony("currentNote");
     this.view.lblNoteTitle.text = this.noteData.title;
     this.view.lblCategoryList.text = this.noteData.categories.join(", ");
     this.view.lblNoteTxt.text = this.noteData.description;
@@ -28,29 +27,24 @@ define({
   },
 
   removeNote: function() {
-    var categories = kony.store.getItem("categories");
-    var ctgIndex = kony.store.getItem("categoryIndex");   
-    var currNote = kony.store.getItem("currentNote");
-
+    var categories = this.getItemFromKony("categories");
+    var ctgIndex = this.getItemFromKony("categoryIndex");
+    var currNote = this.getItemFromKony("currentNote");
     var ctg = categories[ctgIndex];
     var ctgData = ctg.data;
-    
+
     alert(categories);
 
     for(var i = 0; i < ctgData.length; i++){
       var data = ctgData[i];
-      
+
       if(data.title === currNote.title){
         ctgData.splice(i, 1);
       }
     }
     ctg.data = ctgData;
     categories[ctgIndex] = ctg;
-    alert(categories);
-    kony.store.setItem("categories", categories);
-    
-    
-
+    this.setDataToKony("categories", categories);
     var nvg = new kony.mvc.Navigation("frmCategoriesList");
     nvg.navigate();
   },
@@ -58,5 +52,16 @@ define({
   navToSearch:function(){
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
+  },
+
+  setDataToKony:function(key,data){
+    data=JSON.stringify(data);
+    kony.store.setItem(key, data);
+  },
+
+  getItemFromKony:function(key){
+    var toReturn=JSON.parse(kony.store.getItem(key));
+    if(toReturn===0 || toReturn)return toReturn;
+    return ;
   }
 });

@@ -34,7 +34,8 @@ define({
   },
 
   init: function() {
-    this.konyData = kony.store.getItem("categories");
+    this.konyData = this.getItemFromKony("categories");
+//       kony.store.getItem("categories");
     this.categoryDropDown = [];
   },
 
@@ -84,16 +85,16 @@ define({
 
     });
 
-    
-      var filteredNotes = noteTitle !== null ? 
-      filteredCategory.data.filter(function(notes){return notes.name === noteTitle;}) 
-      : null;
 
-      filteredMarker = filteredNotes !== null ?  
+    var filteredNotes = noteTitle !== null ? 
+        filteredCategory.data.filter(function(notes){return notes.name === noteTitle;}) 
+    : null;
+
+    filteredMarker = filteredNotes !== null ?  
       filteredNotes.filter(function(marker){return marker.marker === colourValue;}) 
-      : filteredCategory.data.filter(function(marker){return marker.marker === colourValue.color;});
+    : filteredCategory.data.filter(function(marker){return marker.marker === colourValue.color;});
 
-   
+
 
 
     var konyNavigate = new kony.mvc.Navigation("frmSearchResults");
@@ -131,9 +132,10 @@ define({
     this.view.CircleDark.skin = colorData[0].CircleDark.skin;
   },
 
-
-
-
-
+  getItemFromKony:function(key){
+    var toReturn=JSON.parse(kony.store.getItem(key));
+    if(toReturn===0 || toReturn)return toReturn;
+    return ;
+  }
 
 });
