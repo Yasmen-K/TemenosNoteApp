@@ -35,20 +35,18 @@ define({
 
   init: function() {
     this.konyData = this.getItemFromKony("categories");
-//       kony.store.getItem("categories");
-    this.categoryDropDown = [];
   },
 
 
-
   preShow: function() {
+    this.categoryDropDown = [];
     this.formatColorTagsData.call(this,this.segColourList,this.formatedColorTags);
     this.view.segColorTag.setData(this.formatedColorTags);
     this.view.segColorTag.onRowClick = this.onRowClick;
     this.view.iconAngleDownColor.onTouchStart = this.toggleMenu;
 
     this.view.btnSearch.onClick = this.searchData;
-    this.populateCategoryData = this.populateCategoryData(this.categoryDropDown);
+    this.populateCategoryData(this.categoryDropDown);
     this.view.listBoxCategory.masterData = this.categoryDropDown;
   },
 
@@ -60,7 +58,19 @@ define({
     });
   },
 
+  noCriteria:function(note,category,colour){
 
+    if(!note){
+      if(!category){
+        if(!colour){
+          alert('Please choose a criteria');
+          return;
+        }
+      }
+
+    }
+    return true;
+  },
 
   searchData:function(){
     var categorySelection =  this.view.listBoxCategory.selectedKey;
@@ -68,40 +78,37 @@ define({
     var noteTitle = this.view.txtNoteTitle.text;
     var filteredMarker = '';
 
-    var categoryValue = this.categoryDropDown.find(function(el){
-      return el[0] === categorySelection;
-    });
+    var criteria = this.noCriteria(noteTitle, categorySelection, colourSelection);
 
-    var colourValue = this.segColourList.find(function(el){
-      console.log(el);
-      return el.name === colourSelection ? el.color : "";
-    });
+    if(criteria){
 
+      var categoryValue = this.categoryDropDown.find(function(el){
+        return el[0] === categorySelection;
+      });
 
+      var colourValue = this.segColourList.find(function(el){
 
-    var filteredCategory = this.konyData.find(function(category){
-
-      return category.name === categoryValue[1];
-
-    });
+        return el.name === colourSelection ? el.color : "";
+      });
 
 
-    var filteredNotes = noteTitle !== null ? 
-        filteredCategory.data.filter(function(notes){return notes.name === noteTitle;}) 
-    : null;
+      var filteredCategory = this.konyData.find(function(category){
 
-    filteredMarker = filteredNotes !== null ?  
-      filteredNotes.filter(function(marker){return marker.marker === colourValue;}) 
-    : filteredCategory.data.filter(function(marker){return marker.marker === colourValue.color;});
+        return category.name === categoryValue[1];
 
+      });
 
+      var filteredNotes = noteTitle !== null ? 
+          filteredCategory.data.filter(function(notes){return notes.name === noteTitle;}) 
+      : null;
 
+      filteredMarker = filteredNotes !== null ?  
+        filteredNotes.filter(function(marker){return marker.marker === colourValue;}) 
+      : filteredCategory.data.filter(function(marker){return marker.marker === colourValue.color;});
 
-    var konyNavigate = new kony.mvc.Navigation("frmSearchResults");
-    konyNavigate.navigate(filteredMarker);
-
-
-
+      var konyNavigate = new kony.mvc.Navigation("frmSearchResults");
+      konyNavigate.navigate(filteredMarker);
+    }
   },
 
   formatColorTagsData: function(responseData,fomratedData) {  
@@ -111,7 +118,7 @@ define({
         "CircleDark": {"skin": data.color},
       });
     });
-    console.log(fomratedData);
+
   },
 
   toggleMenu: function(){
@@ -119,9 +126,7 @@ define({
 
     if(isVisible){
       this.view.segColorTag.setVisibility(false);
-      
     }else {
-      
       this.view.segColorTag.setVisibility(true);
     }
   },

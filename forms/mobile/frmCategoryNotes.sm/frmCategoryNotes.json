@@ -31,7 +31,8 @@
     "canUpdateUI": true,
     "children": [
         "flxMain",
-        "reusableHeader"
+        "reusableHeader",
+        "lblNoNotesMessage"
     ],
     "containerweight": 100,
     "controllerInfo": {

@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "32dp"
+        "value": "27dp"
     },
     "_margin_": [
         0,
@@ -30,7 +30,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "323dp"
+        "value": "328dp"
     },
     "android": {
         "psp": {
