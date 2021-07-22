@@ -61,7 +61,7 @@
     "_indicator_": "none",
     "_left_": {
         "type": "string",
-        "value": "10.00%"
+        "value": "8.94%"
     },
     "_margin_": [
         0,
@@ -82,11 +82,11 @@
     },
     "_top_": {
         "type": "string",
-        "value": "53.41%"
+        "value": "59.39%"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "85.69%"
     },
     "autogrowmode": 0,
     "canUpdateUI": true,

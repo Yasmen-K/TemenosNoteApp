@@ -37,7 +37,7 @@
     "canUpdateUI": true,
     "children": [
         "lblCategoryName",
-        "btnAdd"
+        "flxBtnAdd"
     ],
     "clipbounds": true,
     "containerweight": 100,

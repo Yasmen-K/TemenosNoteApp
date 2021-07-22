@@ -4,11 +4,11 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "40dp"
+        "value": "20%"
     },
     "_left_": {
         "type": "string",
-        "value": "27dp"
+        "value": "13dp"
     },
     "_margin_": [
         1,
@@ -17,24 +17,20 @@
         1
     ],
     "_padding_": [
-        12,
+        0,
         0,
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "10%"
-    },
-    "_skin_": "sb010d0cb84b4669ac740988cfb24e63",
-    "_text_": "Pick color",
+    "_skin_": "s893d52a22864cfaacdc1f7d77e9f063",
+    "_text_": "There are no notes added yet.",
     "_top_": {
         "type": "string",
-        "value": "54%"
+        "value": "262dp"
     },
     "_width_": {
         "type": "string",
-        "value": "86.22%"
+        "value": "93.52%"
     },
     "_wrapping_": 2,
     "android": {
@@ -45,8 +41,8 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 4,
-    "id": "lblPickColour",
+    "contentalignment": 5,
+    "id": "lblNoNotesMessage",
     "info": null,
     "ipad": {
         "psp": {
@@ -59,12 +55,11 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "c3314478d78f4eef91602f5458fecdd1",
+    "isvisible": false,
+    "kuid": "d1094d0136924540ab12018a44139526",
     "name": "kony.ui.Label",
-    "paddinginpixel": false,
-    "parent": "frmSearch",
-    "pf": "frmSearch",
+    "parent": "frmCategoryNotes",
+    "pf": "frmCategoryNotes",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},
