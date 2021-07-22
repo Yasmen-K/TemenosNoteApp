@@ -92,7 +92,6 @@ define({
       "lblHeaderTitle":{"text":"Categories"},
       "flxIcon":{"onClick":self.addCategory, "zIndex":"2"},
       "iconPlus":{"src":"iconPlus.json"},
-     
     });
 
     responseData.sort(this.compare);
@@ -104,7 +103,6 @@ define({
         "lblCategoryName": {"text": category.name},
         "lblNotesNumber": {"text": notesNumber},
         "iconArrowCircleORight":{"src":"iconArrowCircleORight.json"},
-        //         "imgArrow": {"text": contact.dateAdded},
         "flxBottomLine": {"width": "95%"}
       });
     });
@@ -131,8 +129,8 @@ define({
 
   onRowClicked: function() {
     var indexOfSelectedRow = this.view.segListCategories.selectedRowIndex[1];
-     this.setDataToKony("categories", this.categories);
-     this.setDataToKony("categoryIndex", indexOfSelectedRow);
+    this.setDataToKony("categories", this.categories);
+    this.setDataToKony("categoryIndex", indexOfSelectedRow);
     var konyNavigate = new kony.mvc.Navigation("frmCategoryNotes");
     konyNavigate.navigate();
   },
@@ -161,12 +159,12 @@ define({
   closePopup:function(){
     this.view.flxPopup.setVisibility(false);
   },
-  
+
   setDataToKony:function(key,data){
     data=JSON.stringify(data);
     kony.store.setItem(key, data);
   },
-  
+
   getItemFromKony:function(key){
     var toReturn=JSON.parse(kony.store.getItem(key));
     if(toReturn)return toReturn;
