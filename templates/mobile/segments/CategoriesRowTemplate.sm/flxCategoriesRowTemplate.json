@@ -37,8 +37,8 @@
     "children": [
         "lblCategoryName",
         "lblNotesNumber",
-        "imgArrow",
-        "flxBottomLine"
+        "flxBottomLine",
+        "iconArrowCircleORight"
     ],
     "clipbounds": true,
     "containerId": true,

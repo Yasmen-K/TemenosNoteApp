@@ -1,21 +1,4 @@
 define({ 
-
- //Type your controller code here 
-  
- segDataList: [
-    {title: "Ivan Minchev",
-     edited: "December 29 2009",
-     marker: "sknCircleGreen"},
-    {title: "Denica Stoeva",
-     edited: "August 25 2010",
-     marker: "sknCircleRed"},
-    {title: "Magazin za mebeli",
-     edited: "Mar 12 2012",
-     marker: "sknCircleBlue"},
-    {title: "Ivan Milchev",
-     edited: "June 14 2020",
-     marker: ""},
-  ],
   
   formatedNotes: [],
   
@@ -43,14 +26,13 @@ define({
   
   formatNotesData: function(responseData,formatedData) {
     var scope = this;
-   
     var sortedNotes = this.sortNotes(responseData);
     
     sortedNotes.forEach(function(note) {
      
       formatedData.push({
         "lblNote": {"text": note.title},
-        "lblEdited": {"text": note.edited},
+        "lblEdited": {"text": scope.formatDate(note.edited)},
         "markerCircle":{"skin":note.marker},
       });
     });
@@ -68,6 +50,16 @@ define({
     konyNavigate.navigate();
   },
   
-
-
+  formatDate:function(date){
+    var editedDate=new Date(date);
+    var currentDate=new Date();
+    var daysAgo=Math.floor((currentDate-editedDate)/86400000);
+    if(daysAgo===1){
+      return "Edited: yesterday";
+    }
+    if(daysAgo<7){
+      return "Edited: " + daysAgo + " days ago";
+    }
+    return "Edited: " + editedDate.getDate() + "-" + (editedDate.getMonth() + 1) + "-" + editedDate.getFullYear();
+  }
  });

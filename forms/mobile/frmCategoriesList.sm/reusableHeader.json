@@ -26,7 +26,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s0168629cb254fb6b46b77bded83344e",
+    "_skin_": "s075b53533494fd9a3042ff374b87a1c",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -47,7 +47,7 @@
         "RoundFloatingButton": {
             "__events__": {},
             "__info__": {
-                "kuid": "f1dd8c40f67f4abfa26f04a3fe09d028",
+                "kuid": "be1a374be333495a9a5527102d29bd50",
                 "srcKUID": "c31c41bd1921461d9b6f0325f1673ab8",
                 "wType": "FlexContainer"
             }
@@ -55,7 +55,7 @@
         "btnSearch": {
             "__events__": {},
             "__info__": {
-                "kuid": "cae422d52e9d459d98064f6b77c50a67",
+                "kuid": "h1b72c7f59a843f0af6fbe5db45a3f1f",
                 "srcKUID": "af90a26459a64be7a9091faff0e761cc",
                 "wType": "Button"
             }
@@ -63,7 +63,7 @@
         "lblAdditionalMessage": {
             "__events__": {},
             "__info__": {
-                "kuid": "ad619b6d34a84a7198d6703a21c0ab20",
+                "kuid": "bd8eb32a25b649acb83ef59f4d127949",
                 "srcKUID": "e1e1c05095d54e6481c68e365ec6d3e7",
                 "wType": "Label"
             }
@@ -71,7 +71,7 @@
         "lblMainMessage": {
             "__events__": {},
             "__info__": {
-                "kuid": "g92394b21d4f4e489bb2c931e5891a79",
+                "kuid": "a67d1acbe2324171abf230b7dd30ee86",
                 "srcKUID": "a49696ea38814dd3af52e1a9069c3874",
                 "wType": "Label"
             }
@@ -80,7 +80,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "ea1d5237322540acb387003b9eb84ced",
+                "kuid": "d4ab95c01efb43b2a0ecb738648e24eb",
                 "srcKUID": "e73e01336c0041388cbcfcf8b4abab03",
                 "wType": "FlexContainer"
             }
@@ -92,7 +92,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "ea1d5237322540acb387003b9eb84ced",
+    "kuid": "d4ab95c01efb43b2a0ecb738648e24eb",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",

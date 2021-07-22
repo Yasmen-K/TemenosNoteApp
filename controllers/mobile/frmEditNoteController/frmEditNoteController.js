@@ -38,7 +38,6 @@ define({
     this.view.reusableHeader.btnSearch.onClick=this.navToSearch;
     this.view.AngleDown.onTouchStart = this.pickCategories;
     this.view.AngleDownColor.onTouchStart = this.pickColor;
-
     this.view.chkBxGrpCategories.onSelection = this.updateCategoryTxt;
   },
 
@@ -66,7 +65,8 @@ define({
   populateCategories: function(){
     var ctgArr = [];
     var i = 1;
-    for(var ctg of kony.store.getItem("categories")){
+    var category=this.getItemFromKony("categories");
+    for(var ctg of category){
       ctgArr.push(["ctg" + i, ctg.name]);
       i++;
     } 
@@ -143,14 +143,13 @@ define({
     var newData = {
       title: this.view.txtBxNoteTitleInput.text,
       description: this.view.txtAreaEditNoteTxt.text,
-      edited: new Data(),
+      edited: new Date(),
       categories: this.view.lblEditCategories.text.split(", "),   
       marker: this.view.CircleDark.skin, 
     };
-    var categories = kony.store.getItem("categories");
-    var ctgIndex = kony.store.getItem("categoryIndex");
-    var currNote = kony.store.getItem("currentNote");
-
+    var categories = this.getItemFromKony("categories");
+    var ctgIndex = this.getItemFromKony("categoryIndex");
+    var currNote = this.getItemFromKony("currentNote");
     var ctg = categories[ctgIndex];
     var ctgData = ctg.data;
 
@@ -167,16 +166,13 @@ define({
       }
       ctg.data = ctgData;
       categories[ctgIndex] = ctg;
-      kony.store.setItem("categories", categories);
-      
-      // Add
+      this.setDataToKony("categories", categories);
     }else {
       ctgData.push(newData);
       ctg.data = ctgData;
-      categories[ctgIndex] = ctg;
-      kony.store.setItem("categories", categories);
+      categories[ctgIndex] = ctg;     
     }
-
+ this.setDataToKony("categories", categories);
     this.view.txtBxNoteTitleInput.text = "";
     this.view.lblEditCategories.text = "";
     this.view.txtAreaEditNoteTxt.text = "";
@@ -188,6 +184,17 @@ define({
   navToSearch:function(){
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
+  },
+
+  setDataToKony:function(key,data){
+    data=JSON.stringify(data);
+    kony.store.setItem(key, data);
+  },
+
+  getItemFromKony:function(key){
+    var toReturn=JSON.parse(kony.store.getItem(key));
+    if(toReturn===0 || toReturn)return toReturn;
+    return ;
   }
 
 });

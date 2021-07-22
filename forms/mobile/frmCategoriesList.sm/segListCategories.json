@@ -9,6 +9,10 @@
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "Button"
                 },
+                "iconPlus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
                 "lblHeaderTitle": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "Categories"
@@ -16,9 +20,9 @@
             },
             [
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -30,9 +34,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -44,9 +48,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -58,9 +62,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -72,9 +76,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -86,9 +90,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -100,9 +104,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -114,9 +118,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -128,9 +132,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -142,9 +146,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -163,6 +167,10 @@
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "Button"
                 },
+                "iconPlus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
                 "lblHeaderTitle": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "Categories"
@@ -170,9 +178,9 @@
             },
             [
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -184,9 +192,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -198,9 +206,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -212,9 +220,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -226,9 +234,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -240,9 +248,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -254,9 +262,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -268,9 +276,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -282,9 +290,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -296,9 +304,9 @@
                     }
                 },
                 {
-                    "imgArrow": {
-                        "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                        "src": "imagedrag.png"
+                    "iconArrowCircleORight": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
                     },
                     "lblCategoryName": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -336,7 +344,7 @@
     ],
     "_top_": {
         "type": "string",
-        "value": "17%"
+        "value": "0%"
     },
     "_width_": {
         "type": "string",
@@ -373,7 +381,7 @@
     "paginationconfig": {
         "position": "bottom"
     },
-    "parent": "frmCategoriesList",
+    "parent": "flxCategory",
     "pf": "frmCategoriesList",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -406,7 +414,8 @@
         "flxBottomLine": "flxBottomLine",
         "flxCategoriesRowTemplate": "flxCategoriesRowTemplate",
         "flxHeaderTemplate": "flxHeaderTemplate",
-        "imgArrow": "imgArrow",
+        "iconArrowCircleORight": "iconArrowCircleORight",
+        "iconPlus": "iconPlus",
         "lblCategoryName": "lblCategoryName",
         "lblHeaderTitle": "lblHeaderTitle",
         "lblNotesNumber": "lblNotesNumber"
