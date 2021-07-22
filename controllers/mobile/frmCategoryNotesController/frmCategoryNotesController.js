@@ -25,12 +25,7 @@ define({
 
   formatNotesData: function(konyIndex,konyData,formatedNotes) {
     var categoryData = konyData[konyIndex];
-		console.log(categoryData.data);
-
-
-	console.log(konyData);
-    
-   
+	
     if(categoryData.data.length > 0){
      
        var sortedNotes = this.sortNotes(categoryData.data);

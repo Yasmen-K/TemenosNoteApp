@@ -161,15 +161,15 @@ define({
     this.view.flxPopup.setVisibility(false);
   },
   
-  setDataToKony(key,data){
-    data=JSON.stringify(data);
-    kony.store.setItem(key, data);
-  },
+//   setDataToKony(key,data){
+//     data=JSON.stringify(data);
+//     kony.store.setItem(key, data);
+//   },
   
-  getItemFromKony(key){
-    var toReturn=JSON.parse(kony.store.getItem(key));
-    if(toReturn)return toReturn;
-    return ;
-  }
+//   getItemFromKony(key){
+//     var toReturn=JSON.parse(kony.store.getItem(key));
+//     if(toReturn)return toReturn;
+//     return ;
+//   }
 
 });
