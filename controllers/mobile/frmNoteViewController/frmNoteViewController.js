@@ -6,6 +6,7 @@ define({
 
   preShow: function(){
     this.noteData = this.getItemFromKony("currentNote");
+
     this.view.lblNoteTitle.text = this.noteData.title;
     this.view.lblCategoryList.text = this.noteData.categories.join(", ");
     this.view.lblNoteTxt.text = this.noteData.description;
@@ -28,12 +29,11 @@ define({
 
   removeNote: function() {
     var categories = this.getItemFromKony("categories");
-    var ctgIndex = this.getItemFromKony("categoryIndex");
+    var ctgIndex = this.getItemFromKony("categoryIndex");   
     var currNote = this.getItemFromKony("currentNote");
+
     var ctg = categories[ctgIndex];
     var ctgData = ctg.data;
-
-    alert(categories);
 
     for(var i = 0; i < ctgData.length; i++){
       var data = ctgData[i];
@@ -60,8 +60,11 @@ define({
   },
 
   getItemFromKony:function(key){
-    var toReturn=JSON.parse(kony.store.getItem(key));
-    if(toReturn===0 || toReturn)return toReturn;
+    var toReturn = JSON.parse(kony.store.getItem(key));
+    if(toReturn === 0 || toReturn){
+      return toReturn;
+    }
     return ;
   }
+
 });
