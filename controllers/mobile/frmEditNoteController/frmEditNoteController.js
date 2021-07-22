@@ -142,9 +142,10 @@ define({
   onClick: function(){
     var newData = {
       title: this.view.txtBxNoteTitleInput.text,
-      categories: this.view.lblEditCategories.text.split(", "),
       description: this.view.txtAreaEditNoteTxt.text,
-      marker: this.view.CircleDark.skin
+      edited: new Data(),
+      categories: this.view.lblEditCategories.text.split(", "),   
+      marker: this.view.CircleDark.skin, 
     };
     var categories = kony.store.getItem("categories");
     var ctgIndex = kony.store.getItem("categoryIndex");
@@ -153,11 +154,13 @@ define({
     var ctg = categories[ctgIndex];
     var ctgData = ctg.data;
 
+    // Save
     if(this.view.btnNoteSave.text === "Save"){
       for(var data of ctgData){
         if(data.title === currNote.title){
           data.title = newData.title;
           data.description = newData.description;
+          data.edited = newData.edited;
           data.categories = newData.categories;
           data.marker = newData.marker;
         }
@@ -165,14 +168,10 @@ define({
       ctg.data = ctgData;
       categories[ctgIndex] = ctg;
       kony.store.setItem("categories", categories);
+      
+      // Add
     }else {
-      ctgData.push({
-        title: newData.title,
-        description: newData.description,
-        edited: "December 29 2009",
-        categories:newData.categories,
-        marker: newData.marker
-      });
+      ctgData.push(newData);
       ctg.data = ctgData;
       categories[ctgIndex] = ctg;
       kony.store.setItem("categories", categories);
