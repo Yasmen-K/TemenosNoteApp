@@ -64,7 +64,7 @@ define({
       this.view.txtBxNoteTitleInput.text = "";
       this.view.lblEditCategories.text = "";
       this.view.txtAreaEditNoteTxt.text = "";
-      this.view.CircleDark.skin = "slFontAwesomeIcon";
+      this.view.CircleDark.skin = "sknCircleDeff";
       this.view.lblEditColorTag.text = "Pick Color";
 
       this.view.btnNoteSave.text = "Add";

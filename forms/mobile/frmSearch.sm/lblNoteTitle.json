@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "33dp"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -26,7 +26,7 @@
     "_text_": "Note title keyword",
     "_top_": {
         "type": "string",
-        "value": "163dp"
+        "value": "21%"
     },
     "_width_": {
         "type": "ref",

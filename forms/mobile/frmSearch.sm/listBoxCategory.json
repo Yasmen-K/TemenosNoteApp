@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "32dp"
+        "value": "10%"
     },
     "_margin_": [
         0,
@@ -23,14 +23,18 @@
         0
     ],
     "_placeholder_": "Please Select",
+    "_right_": {
+        "type": "string",
+        "value": "10%"
+    },
     "_skin_": "s070dded9bf74301a031a1f7dd56600d",
     "_top_": {
         "type": "string",
-        "value": "283dp"
+        "value": "40%"
     },
     "_width_": {
         "type": "string",
-        "value": "323dp"
+        "value": "80%"
     },
     "android": {
         "psp": {

@@ -1,15 +1,11 @@
 define({ 
 
-
-
   onViewCreated: function() {
     this.view.preShow = this.preShow;
 
   },
 
-
   preShow: function() {
-    debugger;
     this.formatedNotes = [];
 //     this.konyIndex = kony.store.getItem("categoryIndex");
     this.konyIndex=this.getItemFromKony("categoryIndex");
@@ -24,8 +20,6 @@ define({
     this.view.lblCategoryName.text = this.konyCategories[this.konyIndex].name;
   },
 
-
-
   formatNotesData: function(konyIndex,konyData,formatedNotes) {
     var categoryData = konyData[konyIndex];
     
@@ -37,7 +31,6 @@ define({
        this.setDataToKony("categories", konyData);
       console.log(konyData);
       sortedNotes.forEach(function(note) {
-        debugger;
         formatedNotes.push({
           "lblNote": {"text": note.title},
           "lblEdited": {"text": self.formatDate(note.edited)},
@@ -73,7 +66,6 @@ define({
     konyNavigate.navigate(this.indexKony);
   },
 
-
   navigate:function(){
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
@@ -107,7 +99,4 @@ define({
     if(toReturn===0 || toReturn)return toReturn;
     return ;
   }
-
-
-
 });
