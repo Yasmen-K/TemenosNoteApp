@@ -2,7 +2,6 @@ define({
 
   onViewCreated: function() {
     this.view.preShow = this.preShow;
-
   },
 
   preShow: function() {
@@ -10,13 +9,14 @@ define({
     this.konyIndex=this.getItemFromKony("categoryIndex");
     this.konyCategories=this.getItemFromKony("categories");
     this.formatNotesData(this.konyIndex,this.konyCategories,this.formatedNotes);
-
     this.view.segNotes.onRowClick = this.onRowClicked;
     this.view.reusableHeader.btnSearch.onClick = this.navigate;
     this.view.flxBtnAdd.onClick = this.navigateAdd;
     this.view.btnDeleteCategory.onClick = this.deleteCategory;
     this.view.lblCategoryName.text = this.konyCategories[this.konyIndex].name;
   },
+
+
 
   formatNotesData: function(konyIndex,konyData,formatedNotes) {
     var categoryData = konyData[konyIndex];
@@ -28,7 +28,6 @@ define({
       var sortedNotes = this.sortNotes(categoryData.data);
       konyData[konyIndex].data = sortedNotes;
       this.setDataToKony("categories", konyData);
-
       sortedNotes.forEach(function(note) {
         formatedNotes.push({
           "lblNote": {"text": note.title},
@@ -66,6 +65,7 @@ define({
     konyNavigate.navigate(this.indexKony);
   },
 
+
   navigate:function(){
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
@@ -80,8 +80,9 @@ define({
     var editedDate=new Date(date);
     var currentDate=new Date();
     var daysAgo=Math.floor((currentDate-editedDate)/86400000);
-    if(daysAgo===0){
-       return "Edited: today";
+
+    if(daysAgo === 0){
+      return "Edited: today";
     }
     if(daysAgo===1){
       return "Edited: yesterday";
@@ -102,4 +103,7 @@ define({
     if(toReturn===0 || toReturn)return toReturn;
     return ;
   }
+
+
+
 });

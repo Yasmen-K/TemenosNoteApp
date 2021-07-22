@@ -5,7 +5,6 @@ define({
   onViewCreated: function() {
     this.view.init = this.init;
     this.view.preShow = this.preShow;
-   
   },
   
   
@@ -20,7 +19,6 @@ define({
   },
   
   onNavigate:function(sentData){
-    alert(sentData);
     this.formatNotesData(sentData, this.formatedNotes);
   },
   
