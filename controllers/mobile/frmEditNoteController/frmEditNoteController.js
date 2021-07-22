@@ -145,7 +145,7 @@ define({
     this.view.CircleDark.skin = colorData[0].CircleDark.skin;
   },
 
-  // Button Add/Save functions
+  // Button Add/Save function
   onClick: function(){
     var newData = {
       title: this.view.txtBxNoteTitleInput.text,
