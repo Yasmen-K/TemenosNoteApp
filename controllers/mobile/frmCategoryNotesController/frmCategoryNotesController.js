@@ -25,13 +25,14 @@ define({
 
   formatNotesData: function(konyIndex,konyData,formatedNotes) {
     var categoryData = konyData[konyIndex];
-
+		console.log(categoryData.data);
 
     if(categoryData.data.length > 0){
-      
+     
        var sortedNotes = this.sortNotes(categoryData.data);
       konyData[konyIndex].data = sortedNotes;
       kony.store.setItem("categories", konyData);
+      console.log(konyData);
       sortedNotes.forEach(function(note) {
 
         formatedNotes.push({
@@ -41,10 +42,9 @@ define({
         });
       });
       this.view.segNotes.setData(formatedNotes);
-     
-    }else{
-      this.view.segNotes.setVisibility(false);
+      return;
     }
+    this.view.segNotes.isVisible(false);
   },
 
    sortNotes:function(arrNotes){
