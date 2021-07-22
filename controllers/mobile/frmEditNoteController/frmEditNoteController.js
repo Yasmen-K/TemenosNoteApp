@@ -34,23 +34,26 @@ define({
     this.formatColorTagsData.call(this,this.segDataList,this.formatedColorTags);
     this.view.segColorTag.setData(this.formatedColorTags);
     this.view.segColorTag.onRowClick = this.onRowClick;
-    this.view.btnNoteSave.onClick = this.onClick;
-    this.view.reusableHeader.btnSearch.onClick=this.navToSearch;
-    this.view.AngleDown.onTouchStart = this.pickCategories;
     this.view.AngleDownColor.onTouchStart = this.pickColor;
 
+    this.view.AngleDown.onTouchStart = this.pickCategories;
     this.view.chkBxGrpCategories.onSelection = this.updateCategoryTxt;
+
+    this.view.btnNoteSave.onClick = this.onClick;   
+    this.view.reusableHeader.btnSearch.onClick=this.navToSearch;
   },
 
   onNavigate: function(data){
     this.populateCategories();
 
     if(data){
+      // Populates the data
       this.view.txtBxNoteTitleInput.text = data.title;
       this.view.lblEditCategories.text = data.categories;
       this.view.txtAreaEditNoteTxt.text = data.noteTxt;
       this.updateChkBox();
 
+      //Populates the color tag
       var skin = data.marker;
       var color = skin.split("sknCircle");
       this.view.CircleDark.skin = data.marker;
@@ -58,15 +61,22 @@ define({
 
       this.view.btnNoteSave.text = "Save";
     }else {
+      this.view.txtBxNoteTitleInput.text = "";
+      this.view.lblEditCategories.text = "";
+      this.view.txtAreaEditNoteTxt.text = "";
+      this.view.CircleDark.skin = "slFontAwesomeIcon";
+      this.view.lblEditColorTag.text = "Pick Color";
+
       this.view.btnNoteSave.text = "Add";
     }
   },
 
-  // Category functions
+  // Category functions:
   populateCategories: function(){
     var ctgArr = [];
     var i = 1;
-    for(var ctg of kony.store.getItem("categories")){
+    var category = this.getItemFromKony("categories");
+    for(var ctg of category){
       ctgArr.push(["ctg" + i, ctg.name]);
       i++;
     } 
@@ -74,10 +84,7 @@ define({
   },
 
   updateChkBox: function(){
-    var categories = this.view.lblEditCategories.text;
-    if(categories.includes(",")){  
-      categories = categories.split(', ');
-    }
+    var categories = this.view.lblEditCategories.text.split(', ');
     var chkBox = this.view.chkBxGrpCategories.masterData;
 
     var arr = [];
@@ -143,13 +150,13 @@ define({
     var newData = {
       title: this.view.txtBxNoteTitleInput.text,
       description: this.view.txtAreaEditNoteTxt.text,
-      edited: new Data(),
+      edited: new Date(),
       categories: this.view.lblEditCategories.text.split(", "),   
       marker: this.view.CircleDark.skin, 
     };
-    var categories = kony.store.getItem("categories");
-    var ctgIndex = kony.store.getItem("categoryIndex");
-    var currNote = kony.store.getItem("currentNote");
+    var categories = this.getItemFromKony("categories");
+    var ctgIndex = this.getItemFromKony("categoryIndex");
+    var currNote = this.getItemFromKony("currentNote");
 
     var ctg = categories[ctgIndex];
     var ctgData = ctg.data;
@@ -165,17 +172,14 @@ define({
           data.marker = newData.marker;
         }
       }
-      ctg.data = ctgData;
-      categories[ctgIndex] = ctg;
-      kony.store.setItem("categories", categories);
-      
       // Add
     }else {
       ctgData.push(newData);
-      ctg.data = ctgData;
-      categories[ctgIndex] = ctg;
-      kony.store.setItem("categories", categories);
     }
+
+    ctg.data = ctgData;
+    categories[ctgIndex] = ctg;
+    this.setDataToKony("categories", categories);
 
     this.view.txtBxNoteTitleInput.text = "";
     this.view.lblEditCategories.text = "";
@@ -188,6 +192,19 @@ define({
   navToSearch:function(){
     var konyNavigate = new kony.mvc.Navigation("frmSearch");
     konyNavigate.navigate();
+  },
+
+  setDataToKony:function(key,data){
+    data=JSON.stringify(data);
+    kony.store.setItem(key, data);
+  },
+
+  getItemFromKony:function(key){
+    var toReturn = JSON.parse(kony.store.getItem(key));
+    if(toReturn === 0 || toReturn) {
+      return toReturn;
+    }
+    return ;
   }
 
 });
