@@ -1,12 +1,9 @@
 {
     "DNDConfig": null,
+    "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "19%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "value": "70dp"
     },
     "_margin_": [
         0,
@@ -22,47 +19,46 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s0e40fd00e3e4f1cb055777652a2b04a",
+    "_right_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_skin_": "s653494b21484a6a9ff61a0a2694c748",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "20%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [
-        "CircleDark",
-        "lblColor"
-    ],
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [],
     "clipbounds": true,
     "containerId": true,
     "containerweight": 100,
-    "controllerInfo": {
-        "default": {
-            "channel": "mobile",
-            "name": "flxContRowColorTagController"
-        }
-    },
     "enablescrolling": true,
-    "id": "flxContRowColorTag",
+    "id": "flxIcon",
     "info": null,
-    "isTemplate": true,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d0fd13bce6724f5591261df72aaa1dd1",
+    "kuid": "b88952c0a8b548199e8d052b535d9c50",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "segColorTagRowTemplate",
-    "pf": "segColorTagRowTemplate",
+    "parent": "flxHeaderTemplate",
+    "pf": "CategoryHeaderTemplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "snapgridsize": "3",
+    "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 2
 }

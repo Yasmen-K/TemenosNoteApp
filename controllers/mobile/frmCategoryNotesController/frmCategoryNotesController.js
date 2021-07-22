@@ -37,7 +37,6 @@ define({
        this.setDataToKony("categories", konyData);
       console.log(konyData);
       sortedNotes.forEach(function(note) {
-        debugger;
         formatedNotes.push({
           "lblNote": {"text": note.title},
           "lblEdited": {"text": self.formatDate(note.edited)},
@@ -88,6 +87,9 @@ define({
     var editedDate=new Date(date);
     var currentDate=new Date();
     var daysAgo=Math.floor((currentDate-editedDate)/86400000);
+    if(daysAgo===0){
+       return "Edited: today";
+    }
     if(daysAgo===1){
       return "Edited: yesterday";
     }

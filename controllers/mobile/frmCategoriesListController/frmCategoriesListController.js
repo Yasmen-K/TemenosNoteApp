@@ -90,7 +90,9 @@ define({
     var header=[];
     header.push({
       "lblHeaderTitle":{"text":"Categories"},
-      "iconPlus":{"src":"iconPlus.json","onClick":self.addCategory}
+      "flxIcon":{"onClick":self.addCategory, "zIndex":"2"},
+      "iconPlus":{"src":"iconPlus.json"},
+     
     });
 
     responseData.sort(this.compare);
@@ -113,7 +115,6 @@ define({
   },
 
   renderSegList:function(){
-    debugger;
     var changedCategory=this.getItemFromKony("categories");
     if(changedCategory){
       this.categories=changedCategory;
