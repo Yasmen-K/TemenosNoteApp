@@ -49,23 +49,23 @@
     "clipbounds": true,
     "containerweight": 0,
     "dataDiffs": {
-        "ButtonRoundFloat": {
+        "RoundFloatingButton": {
             "__events__": {},
             "__info__": {
-                "kuid": "a8d3092837734614ac251f4871c61ff5",
+                "kuid": "ha1b7e115f1c4ae4b486f3c2ad98dd76",
+                "srcKUID": "c31c41bd1921461d9b6f0325f1673ab8",
+                "wType": "FlexContainer"
+            }
+        },
+        "btnSearch": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j45b9f7cd2014325834cd37cbb2cb506",
                 "srcKUID": "af90a26459a64be7a9091faff0e761cc",
                 "wType": "Button"
             }
         },
-        "Label0efa394b4fa8c4e": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "c3ccb3e91d9a4b8ea415e99a2df8035f",
-                "srcKUID": "a49696ea38814dd3af52e1a9069c3874",
-                "wType": "Label"
-            }
-        },
-        "Label0j8f97ff0433146": {
+        "lblAdditionalMessage": {
             "__events__": {},
             "__info__": {
                 "kuid": "f37343dbed944170987a83991e6425be",
@@ -73,12 +73,12 @@
                 "wType": "Label"
             }
         },
-        "RoundFloatingButton": {
+        "lblMainMessage": {
             "__events__": {},
             "__info__": {
-                "kuid": "ha1b7e115f1c4ae4b486f3c2ad98dd76",
-                "srcKUID": "c31c41bd1921461d9b6f0325f1673ab8",
-                "wType": "FlexContainer"
+                "kuid": "c3ccb3e91d9a4b8ea415e99a2df8035f",
+                "srcKUID": "a49696ea38814dd3af52e1a9069c3874",
+                "wType": "Label"
             }
         },
         "reusableHeader": {

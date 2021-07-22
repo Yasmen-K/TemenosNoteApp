@@ -118,9 +118,9 @@ define({
 
     if(isVisible){
       this.view.segColorTag.setVisibility(false);
-      console.log(isVisible);
+      
     }else {
-      console.log(isVisible);
+      
       this.view.segColorTag.setVisibility(true);
     }
   },
