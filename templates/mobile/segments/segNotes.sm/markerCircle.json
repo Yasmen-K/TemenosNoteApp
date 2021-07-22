@@ -3,38 +3,34 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_height_": {
-        "type": "string",
-        "value": "40dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "10%"
+        "value": "22dp"
     },
     "_margin_": [
-        1,
-        1,
-        1,
-        1
-    ],
-    "_padding_": [
-        12,
+        0,
         0,
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "10%"
-    },
-    "_skin_": "sb010d0cb84b4669ac740988cfb24e63",
-    "_text_": "Pick color",
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s71c740eb7364c19b6ed1035efa69b5f",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "54%"
+        "value": "37dp"
     },
     "_width_": {
-        "type": "string",
-        "value": "80%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -44,9 +40,10 @@
         }
     },
     "canUpdateUI": true,
+    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblPickColour",
+    "id": "markerCircle",
     "info": null,
     "ipad": {
         "psp": {
@@ -58,15 +55,12 @@
             "wrapping": 2
         }
     },
-    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c3314478d78f4eef91602f5458fecdd1",
+    "kuid": "b7e0a613093e44899494bb109a9196d5",
+    "masterType": 1,
     "name": "kony.ui.Label",
-    "paddinginpixel": false,
-    "parent": "frmSearch",
-    "pf": "frmSearch",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
+    "parent": "flxBox",
+    "pf": "segNotes",
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",

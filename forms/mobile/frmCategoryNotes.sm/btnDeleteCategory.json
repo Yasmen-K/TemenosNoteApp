@@ -2,13 +2,13 @@
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
     "__parentReadjusting__": false,
+    "_bottom_": {
+        "type": "string",
+        "value": "4%"
+    },
     "_height_": {
         "type": "string",
         "value": "50dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "45dp"
     },
     "_margin_": [
         6,
@@ -24,15 +24,15 @@
     ],
     "_skin_": "s1ed8bbd5cee4c27adc27f304f6566c8",
     "_text_": "Remove Category",
-    "_top_": {
-        "type": "string",
-        "value": "731dp"
-    },
     "_width_": {
         "type": "string",
         "value": "300dp"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,

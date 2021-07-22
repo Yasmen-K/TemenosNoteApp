@@ -3,19 +3,15 @@ define({
   formatedNotes: [],
   
   onViewCreated: function() {
-    this.view.init = this.init;
     this.view.preShow = this.preShow;
   },
   
-  
-  init: function() {
-    this.formatNotesData = this.formatNotesData;
-    this.sortNotes = this.sortNotes;
-     this.view.reusableHeader.btnSearch.onClick = this.navigate;
-  },
+ 
   
   preShow: function() {
+    this.view.reusableHeader.btnSearch.onClick = this.navigate;
     this.view.segNotes.setData(this.formatedNotes);
+    this.view.flxBtnAdd.onClick = this.navigateAdd;
   },
   
   onNavigate:function(sentData){
@@ -48,10 +44,18 @@ define({
     konyNavigate.navigate();
   },
   
+  navigateAdd:function(){
+    var konyNavigate = new kony.mvc.Navigation("frmEditNote");
+    konyNavigate.navigate();
+  },
+  
   formatDate:function(date){
     var editedDate=new Date(date);
     var currentDate=new Date();
     var daysAgo=Math.floor((currentDate-editedDate)/86400000);
+    if(daysAgo === 0){
+      return "Edited: today";
+    }
     if(daysAgo===1){
       return "Edited: yesterday";
     }

@@ -158,6 +158,7 @@ define({
 
   closePopup:function(){
     this.view.flxPopup.setVisibility(false);
+    this.view.flxPopup.txtBoxAddCategory.text="";
   },
 
   setDataToKony:function(key,data){

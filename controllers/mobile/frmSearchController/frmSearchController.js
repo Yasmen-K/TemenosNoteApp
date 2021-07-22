@@ -33,12 +33,10 @@ define({
 
   },
 
-  init: function() {
-    this.konyData = this.getItemFromKony("categories");
-  },
-
+  
 
   preShow: function() {
+    this.konyData = this.getItemFromKony("categories");
     this.categoryDropDown = [];
     this.formatColorTagsData.call(this,this.segColourList,this.formatedColorTags);
     this.view.segColorTag.setData(this.formatedColorTags);
@@ -58,19 +56,7 @@ define({
     });
   },
 
-  noCriteria:function(note,category,colour){
 
-    if(!note){
-      if(!category){
-        if(!colour){
-          alert('Please choose a criteria');
-          return;
-        }
-      }
-
-    }
-    return true;
-  },
 
   searchData:function(){
     var categorySelection =  this.view.listBoxCategory.selectedKey;
@@ -78,9 +64,6 @@ define({
     var noteTitle = this.view.txtNoteTitle.text;
     var filteredMarker = '';
 
-    var criteria = this.noCriteria(noteTitle, categorySelection, colourSelection);
-
-    if(criteria){
 
       var categoryValue = this.categoryDropDown.find(function(el){
         return el[0] === categorySelection;
@@ -99,16 +82,16 @@ define({
       });
 
       var filteredNotes = noteTitle !== null ? 
-          filteredCategory.data.filter(function(notes){return notes.name === noteTitle;}) 
+          filteredCategory.data.filter(function(notes){return notes.title === noteTitle;}) 
       : null;
 
       filteredMarker = filteredNotes !== null ?  
-        filteredNotes.filter(function(marker){return marker.marker === colourValue;}) 
+        filteredNotes.filter(function(marker){return marker.marker === colourValue.color;}) 
       : filteredCategory.data.filter(function(marker){return marker.marker === colourValue.color;});
 
       var konyNavigate = new kony.mvc.Navigation("frmSearchResults");
       konyNavigate.navigate(filteredMarker);
-    }
+    
   },
 
   formatColorTagsData: function(responseData,fomratedData) {  

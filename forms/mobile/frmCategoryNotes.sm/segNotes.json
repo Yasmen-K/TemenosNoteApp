@@ -146,7 +146,7 @@
     ],
     "_height_": {
         "type": "string",
-        "value": "454dp"
+        "value": "385dp"
     },
     "_indicator_": "none",
     "_left_": {
@@ -211,11 +211,11 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainselection": false,
-    "rowTemplateId": "be06837284bf40a990281c89ccd4c313",
+    "rowTemplateId": "f15e360b6f0540f7a560e7232214a5bf",
     "rowcounter": 9,
     "rowfocusskin": "s1cae2cd61234fcf95908f5cd97e511a",
     "rowskin": "saebb7f7165d4a4f971900e9cb40a97d",
-    "rowtemplate": "FBox0fac0c2b2d72342",
+    "rowtemplate": "flxBox",
     "screenlevelwidget": false,
     "seccounter": 0,
     "sectionheaderskin": "s0461ef07d754e118f6ced51acdd11b4",
@@ -235,6 +235,7 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
+        "flxBox": "flxBox",
         "lblEdited": "lblEdited",
         "lblNote": "lblNote",
         "markerCircle": "markerCircle"
